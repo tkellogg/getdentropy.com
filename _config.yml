@@ -5,6 +5,7 @@ title: dentropy
 url: "https://getdentropy.com"
 baseurl:
 google_analytics_key:
+google_tag: "G-ZR622PD7BL"
 google_maps_javascript_api_key:
 disqus_shortname:
 
