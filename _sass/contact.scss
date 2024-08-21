@@ -14,8 +14,12 @@
 		width: 100%
 	}
 
-	p {
-		margin: 0;
+	.column {
+		flex-grow: 1;
+
+		* {
+			text-align: center;
+		}
 	}
 
 	.contact-form, .contact-details  {
