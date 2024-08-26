@@ -76,6 +76,7 @@ footer {
 	.copyright {
 		font-size: .8em;
 		margin: 0 auto;
+		padding-bottom: 1em;
 		
 		@media #{$tablet} {
 			text-align: center;
