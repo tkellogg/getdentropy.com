@@ -22,7 +22,8 @@ social:
     - https://github.com/CloudCannon/hydra-jekyll-template
 
 # -----
-# Build
+# Build settings
+theme: minima
 
 timezone: Etc/UTC
 
@@ -31,7 +32,7 @@ collections:
     _hide_content: true
 
 paginate: 10
-paginate_path: "/blog/:num/"
+paginate_path: "/page/:num/"
 permalink: pretty
 
 defaults:
