@@ -129,7 +129,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Jost', sans-serif;
     color: #606060;
-    font-size: 0.8rem;
+    font-size: 1rem; /* Changed: Set default body font size to 1rem */
     background: #f9fafb;
     overflow-x: hidden;
     position: relative;
@@ -862,7 +862,7 @@ button.hamburger.animate.active:after {
     color: var(--color-white);
     background: var(--color-default);
     border: 0;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     margin-right: 0.25rem;
     padding: 0.9rem 1.3rem 0.8rem;
     font-size: 0.65rem;
@@ -6486,6 +6486,9 @@ footer.inverse-text address {
     .navbar.navbar-fancy:not(.fixed) .dropdown-menu {
         border-radius: 0.2rem;
     }
+    .navitem-light {
+        color: white;
+    }
     .navbar .navbar-nav .nav-link {
         padding-right: 1.2rem;
         padding-left: 1.2rem
@@ -7127,4 +7130,11 @@ footer.inverse-text address {
 }
 .overflow-hidden {
     overflow: hidden;
+}
+
+.feature-text {
+    padding-top: 1.5rem;
+    /* padding-bottom: 1rem; */
+    padding-left: 1rem;
+    padding-right: 1rem;
 }

@@ -1,21 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-default">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img src="/assets/images/dentropy-logo.png" alt="Dentropy" class="logo-dark" style="height: 35px; width: auto;">
+      <img src="/assets/images/dentropy-logo-wht.png" alt="Dentropy" class="logo-dark" style="height: 35px; width: auto;">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link" href="/team.html">Team</a>
+        <li class="nav-item-light">
+          <a class="nav-link text-white" href="/team.html">Team</a>
+        </li>
+        <li class="nav-item-light">
+          <a class="nav-link text-white" href="/careers.html">Careers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/careers.html">Careers</a>
-        </li>
-        <li class="nav-item">
-          <a href="/signup.html" class="btn btn-send">Sign Up</a>
+          <a href="/signup.html" class="btn btn-dark">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -41,5 +41,8 @@
   .navbar-nav .btn.btn-send.nav-link:hover {
     color: white;
     opacity: 0.9;
+  }
+  .navbar-nav .nav-link.text-white {
+    color: white !important;
   }
 </style>

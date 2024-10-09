@@ -8,19 +8,45 @@ custom_font: font2
 <div class="content-wrapper">
     {% include one_page_nav_2.html %}
     
-    <section id="signup" class="py-5">
+    <section id="signup" class="py-1">
         <div class="wrapper white-wrapper">
             <div class="container inner">
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <h2 class="display-3 text-center mb-4">Sign Up for Dentropy</h2>
                         <div class="space20"></div>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrXwaCTkwDp1xFPSpIa6cbPWU1-nXXigN7QjqEgPd1OTDXUA/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrXwaCTkwDp1xFPSpIa6cbPWU1-nXXigN7QjqEgPd1OTDXUA/viewform?embedded=true&usp=pp_url&entry.339456034=MainSite" width="100%" height="2170px" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    {% include footer_3.html extra_class="light-wrapper" %}
-</div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-content text-center py-4">
+              <p class="mb-0">© 2024 Kellogg Software, LLC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+<script>
+  // Function to resize the iframe
+  function resizeIframe() {
+    var iframe = document.getElementById('signup-form');
+    if(iframe) {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+  }
+
+  // Resize the iframe when the window is resized
+  window.addEventListener('resize', resizeIframe);
+
+  // Resize the iframe when it's loaded
+  document.getElementById('signup-form').onload = resizeIframe;
+</script>
