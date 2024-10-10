@@ -6,7 +6,7 @@ custom_font: font2
 hero_area:
   enable: true
   title: "Capture your"
-  sub_title: "Dentropy is your AI organizer to connecting you and your team's scattered thoughts in meaningful ways."
+  sub_title: "Dentropy is your AI organizer to connecting your scattered thoughts in meaningful ways."
   animated_text:
     - "thoughts"
     - "ideas"
@@ -29,9 +29,9 @@ features_area:
       image: "/assets/images/why-3.png"
       description: "Self-organize your data and have control."
 
-    - title: "Collective AI"
-      image: "/assets/images/why-4.png"
-      description: "Securely share your data to be more efficient"
+    #- title: "Collective AI"
+    #  image: "/assets/images/why-4.png"
+    #  description: "Securely share your data to be more efficient"
 
 portfolios_area:
   enable: false
@@ -77,19 +77,19 @@ portfolios_area:
 process_area:
   enable: true
   title: "Who is Dentropy for?"
-  sub_title: "Dentropy takes loose thoughts and connects them for you or your team."
+  sub_title: "Dentropy is for individuals balancing their personal and professional life."
   image: "/assets/images/people.png"
   lists:
-    - title: "Empower yourself for your every day life"
-      description: "Keep track of daily tasks, thoughts, and ideas—all in one place with Dentropy."
+    - title: "Stay Organized in Your Daily Life"
+      description: "From groceries and home tasks to baby schedules, Dentropy helps you keep track of everything you need to remember in one place, making your day-to-day life more manageable."
       image: "/assets/images/groceries-icon.png"
 
-    - title: "Enable Your Sales Team on the Move"
-      description: "Sales teams use Dentropy to stay on top of client conversations, track follow-ups, and seamlessly coordinate with their team while on the move."
+    - title: "Keep Work Information at Your Fingertips"
+      description: "Dentropy helps you remember key details from meetings, track tasks, and organize information you’ve learned, so you can stay focused and productive at work."
       image: "/assets/images/baby-icon.png"
 
-    - title: "Empower Field Workers to Stay Organized"
-      description: "Field workers rely on Dentropy to jot down quick notes, manage tasks, and maintain smooth communication with their team, even in busy environments."
+    - title: "Capture and Organize Your Creative Ideas"
+      description: "Whether you’re brainstorming for a project or managing multiple creative tasks, Dentropy helps you capture and connect your ideas, so nothing gets lost in the shuffle."
       image: "/assets/images/groceries-icon.png"
 
       # - title: "and more..."
@@ -352,7 +352,8 @@ waitlist_signup:
                     <div class="col-md-12">
                         {% if page.features_area.title %}
                         <h3 class="title-color color-gray">{{page.features_area.title}}</h3>
-                        {% endif %} {% if page.features_area.sub_title %}
+                        {% endif %} 
+                        {% if page.features_area.sub_title %}
                         <h2 class="display-3 text-center">{{page.features_area.sub_title}}</h2>
                         {% endif %}
                     </div>
@@ -360,7 +361,7 @@ waitlist_signup:
                 <div class="space40"></div>
                 <div class="row">
                     {% for feature in page.features_area.features %}
-                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
                         <div class="feature-box text-center">
                             {% if feature.image %}
                             <img src="{{ feature.image }}" alt="{{ feature.title }}" class="mb-3 feature-image" style="max-width: 140px;">
