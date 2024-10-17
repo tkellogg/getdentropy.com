@@ -427,6 +427,7 @@ canvas {
     z-index: 1008;
     width: 100%;
     padding: 0;
+    position: static; /* Changed from fixed to static */
 }
 .navbar.fixed.banner--stick,
 .navbar.shadow:not(.fixed):not(.banner--stick) {
@@ -586,6 +587,8 @@ acronym[title] {
 /*-----------------------------------------------------------------------------------*/
 /*  04. STICKY HEADER
 /*-----------------------------------------------------------------------------------*/
+/* Remove or comment out the following sections */
+/*
 .navbar.fixed {
     margin: 0;
     width: 100%;
@@ -628,6 +631,7 @@ acronym[title] {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
 }
+*/
 /*-----------------------------------------------------------------------------------*/
 /*  05. MEGA MENU
 /*-----------------------------------------------------------------------------------*/
@@ -2797,7 +2801,7 @@ footer [class*="col-"] .widget:first-child {
 footer:not(.blockquote-footer) a {
     color: #606060;
 }
-footer .meta a {
+.meta a {
     color: #999;
 }
 footer:not(.blockquote-footer) a:hover {

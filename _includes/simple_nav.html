@@ -1,0 +1,115 @@
+<nav class="simple-nav">
+  <div class="simple-nav-container">
+    <a class="simple-nav-brand" href="/">
+      <img src="/assets/images/dentropy-logo.png" alt="Dentropy" class="simple-nav-logo">
+    </a>
+    <button class="simple-nav-toggle" type="button" aria-label="Toggle navigation">
+      <span class="simple-nav-toggle-icon"></span>
+    </button>
+    <div class="simple-nav-menu">
+      <ul class="simple-nav-list">
+        <li class="simple-nav-item">
+          <a class="simple-nav-link" href="/">Home</a>
+        </li>
+        <li class="simple-nav-item">
+          <a class="simple-nav-link" href="/about">About</a>
+        </li>
+        <li class="simple-nav-item">
+          <a class="simple-nav-link" href="/services">Services</a>
+        </li>
+        <li class="simple-nav-item">
+          <a class="simple-nav-link" href="/contact">Contact</a>
+        </li>
+        <li class="simple-nav-item simple-nav-button">
+          <a href="/signup" class="simple-nav-btn">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .simple-nav {
+    padding: 1rem 0;
+    background-color: #ffffff;
+  }
+  .simple-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .simple-nav-brand {
+    display: flex;
+    align-items: center;
+  }
+  .simple-nav-logo {
+    height: 40px;
+    width: auto;
+  }
+  .simple-nav-toggle {
+    display: none;
+  }
+  .simple-nav-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .simple-nav-item {
+    margin-left: 1.5rem;
+  }
+  .simple-nav-link {
+    color: #333333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .simple-nav-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .simple-nav-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .simple-nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      padding: 1rem;
+    }
+    .simple-nav-menu.active {
+      display: block;
+    }
+    .simple-nav-list {
+      flex-direction: column;
+    }
+    .simple-nav-item {
+      margin: 0.5rem 0;
+    }
+    .simple-nav-button {
+      margin-top: 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.querySelector('.simple-nav-toggle').addEventListener('click', function() {
+    document.querySelector('.simple-nav-menu').classList.toggle('active');
+  });
+</script>

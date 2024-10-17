@@ -362,6 +362,7 @@ waitlist_signup:
     max-width: 100%;
     height: auto;
     max-height: 850px;
+    object-fit: contain; /* This ensures the image keeps its aspect ratio */
   }
 
   .background-phone {
@@ -378,69 +379,117 @@ waitlist_signup:
     margin-left: -12%;
   }
 
-  @media (max-width: 991px) { /* Tablet */
+  @media (min-width: 769px) and (max-width: 991px) { /* Tablet */
     .hero-section {
-      padding: 7rem 0 24rem; /* Adjusted for tablet */
-      margin-bottom: 12rem;
+      padding: 7rem 0 26rem; /* Adjusted padding */
+      margin-bottom: 10rem; /* Adjusted margin */
+    }
+
+    .hero-title {
+      font-size: 2.75rem; /* Slightly smaller than desktop */
+    }
+
+    .hero-subtitle {
+      font-size: 1.375rem; /* Slightly smaller than desktop */
+    }
+
+    .dentropy-phone-container {
+      bottom: -38rem; /* Adjusted to match proportions */
+    }
+
+    .phone-image-wrapper {
+      max-width: 95%; /* Slightly smaller than desktop */
+    }
+
+    .background-phone {
+      width: 58.5%; /* Same as desktop */
+      margin-right: -12%; /* Same as desktop */
+    }
+
+    .foreground-phone {
+      width: 55%; /* Same as desktop */
+      margin-left: -12%; /* Same as desktop */
+    }
+
+    .dentropy-phone-image {
+      max-height: 750px; /* Adjusted for tablet */
     }
   }
 
   @media (max-width: 768px) { /* Mobile */
     .hero-section {
-      padding: 6rem 0 20rem; /* Adjusted for mobile */
+      padding: 6rem 0 20rem; /* Increased bottom padding */
       margin-bottom: 10rem;
     }
 
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+
     .dentropy-phone-container {
-      bottom: -30rem; /* Keep this value the same for mobile */
+      bottom: -38rem; /* Adjusted to accommodate larger images */
     }
 
     .phone-image-wrapper {
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      margin: 0 auto;
     }
 
     .background-phone {
-      width: 76.5%; /* Keep original mobile size */
+      width: 58.5%; /* Match desktop size */
+      max-width: none;
+      margin-right: -12%; /* Match desktop overlap */
     }
 
     .foreground-phone {
-      width: 75%; /* Keep original mobile size */
-      margin-left: 0;
-      margin-top: -20%;
-    }
-  }
-
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.25rem;
-    }
-
-    .hero-section {
-        padding: 6rem 0 2rem;
+      width: 55%; /* Match desktop size */
+      max-width: none;
+      margin-left: -12%; /* Match desktop overlap */
+      margin-top: 0;
     }
 
     .dentropy-phone-image {
-        max-height: 600px; /* Adjusted for smaller screens, you can modify this value as needed */
+      max-height: none; /* Remove max-height constraint */
     }
-}
+  }
 
-@media (max-width: 576px) {
+  @media (max-width: 576px) { /* Smaller mobile devices */
+    .hero-section {
+      padding: 6rem 0 18rem;
+      margin-bottom: 8rem;
+    }
+
     .hero-title {
-        font-size: 2rem;
+      font-size: 2rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+      font-size: 1rem;
     }
-}
+
+    .dentropy-phone-container {
+      bottom: -28rem;
+    }
+
+    .background-phone {
+      width: 62%; /* Slightly larger for better visibility on small screens */
+    }
+
+    .foreground-phone {
+      width: 58%; /* Slightly larger for better visibility on small screens */
+    }
+  }
 </style>
 
 <div class="content-wrapper">
-    {% include one_page_nav_2.html %} 
+    {% include simple_nav.html %}
     {% if page.hero_area.enable %}
     <section id="home" class="hero-section">
         <div class="container">
@@ -459,7 +508,7 @@ waitlist_signup:
                         <div class="dentropy-phone-container">
                             <div class="phone-image-wrapper">
                                 <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone Background" class="img-fluid dentropy-phone-image background-phone">
-                                <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone Foreground" class="img-fluid dentropy-phone-image foreground-phone">
+                                <!-- <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone Foreground" class="img-fluid dentropy-phone-image foreground-phone"> -->
                             </div>
                         </div>
                     </div>
