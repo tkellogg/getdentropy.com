@@ -5,7 +5,7 @@ custom_css: purple
 custom_font: font2
 hero_area:
   enable: true
-  title: "Organize your thoughts"
+  title: "Organize your stream of consciousness"
   sub_title: "Dentropy is your AI organizer to connecting your scattered thoughts in meaningful ways."
   animated_text:
     - "thoughts"
@@ -13,7 +13,7 @@ hero_area:
     - "notes"
 
 features_area:
-  enable: true
+  enable: false
   # title: "Why Dentropy?"
   sub_title: "Why Dentropy?"
   features:
@@ -75,7 +75,7 @@ portfolios_area:
       url: "#"
 
 process_area:
-  enable: true
+  enable: false
   title: "Who is Dentropy for?"
   sub_title: "Dentropy is for individuals balancing their personal and professional life."
   image: "/assets/images/people.png"
@@ -241,6 +241,39 @@ waitlist_signup:
   sub_title: "Join our waitlist and get early access to the future of AI-powered organization."
   button_text: "Sign Up for Waitlist"
   button_url: "/signup"
+
+value_props:
+  enable: true
+  personal_database:
+    title: "Your Personal Organizable Database"
+    description: "Dentropy creates a customized, flexible database tailored to your unique needs. Organize, access, and connect your information in ways that make sense to you."
+    image: "/assets/images/personal-database.png"
+    features:
+      - "Stored in a graph database"
+      - "Everything is connected"
+      - "Answers any database query"
+
+  stream_of_consciousness:
+    title: "Shared knowledge base with your team"
+    description: "Share all knowledge about a topic with a team mate or family member."
+    image: "/assets/images/stream-of-consciousness.svg"
+    features:
+      - "Onboard new team members"
+      - "Report status, continuously"
+      - "Make lists, as things come to mind (e.g. groceries)"
+
+key_features:
+  enable: true
+  title: "Key Features"
+  features:
+    - title: "Notes indexed in a graph database"
+      image: "/assets/images/graph-icon.png"
+
+    - title: "Stores voice, text, images, URLs"
+      image: "/assets/images/record-icon.png"
+
+    - title: "AI Chat, but only your information"
+      image: "/assets/images/ai-icon.png"
 ---
 
 <style>
@@ -301,11 +334,11 @@ waitlist_signup:
     }
 }
 .hero-section {
-    padding: 8rem 0 29rem; /* Updated padding */
+    padding: 8rem 0 28rem; /* Changed from 8rem 0 40rem */
     overflow: visible;
     position: relative;
     background: linear-gradient(135deg, #909DDB 0%, #6A4D75 100%);
-    margin-bottom: 14rem; /* Updated margin-bottom */
+    margin-bottom: 20rem; /* Changed from 0 */
 }
 
 .hero-content {
@@ -335,91 +368,73 @@ waitlist_signup:
 }
 
 .hero-content .btn {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
+
+.hero-content .btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.simple-nav-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
 
 .dentropy-phone-container {
     position: absolute;
-    bottom: -42rem; /* Keep this value the same */
+    bottom: -18rem; /* Adjusted from -14rem to accommodate larger image */
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
-    background-color: none;
 }
 
 .phone-image-wrapper {
-    position: relative;
     width: 100%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    max-width: 450px; /* Increased from 400px */
+    margin: 0 auto;
+}
 
-  .dentropy-phone-image {
-    max-width: 100%;
+.dentropy-phone-image {
+    width: 100%;
     height: auto;
-    max-height: 850px;
-    object-fit: contain; /* This ensures the image keeps its aspect ratio */
-  }
+    max-height: 900px; /* Increased from 800px */
+    object-fit: contain;
+}
 
-  .background-phone {
-    position: relative;
-    z-index: 2;
-    width: 58.5%; /* Keep original size */
-  }
-
-  .foreground-phone {
-    position: relative;
-    z-index: 1;
-    width: 55%; /* Keep original size */
-    opacity: 0.7;
-    margin-left: -12%;
-  }
-
-  @media (min-width: 769px) and (max-width: 991px) { /* Tablet */
+@media (max-width: 991px) { /* Tablet */
     .hero-section {
-      padding: 7rem 0 26rem; /* Adjusted padding */
-      margin-bottom: 10rem; /* Adjusted margin */
-    }
-
-    .hero-title {
-      font-size: 2.75rem; /* Slightly smaller than desktop */
-    }
-
-    .hero-subtitle {
-      font-size: 1.375rem; /* Slightly smaller than desktop */
+      padding: 7rem 0 18rem; /* Adjusted for tablet */
+      margin-bottom: 15rem;
     }
 
     .dentropy-phone-container {
-      bottom: -38rem; /* Adjusted to match proportions */
+      bottom: -16rem; /* Adjusted from -15rem */
     }
 
     .phone-image-wrapper {
-      max-width: 95%; /* Slightly smaller than desktop */
-    }
-
-    .background-phone {
-      width: 58.5%; /* Same as desktop */
-      margin-right: -12%; /* Same as desktop */
-    }
-
-    .foreground-phone {
-      width: 55%; /* Same as desktop */
-      margin-left: -12%; /* Same as desktop */
-    }
-
-    .dentropy-phone-image {
-      max-height: 750px; /* Adjusted for tablet */
+      max-width: 400px; /* Increased from 350px */
     }
   }
 
-  @media (max-width: 768px) { /* Mobile */
+  @media (max-width: 767px) { /* Mobile */
     .hero-section {
-      padding: 6rem 0 20rem; /* Increased bottom padding */
-      margin-bottom: 10rem;
+      padding: 6rem 0 18rem;
+      margin-bottom: 13rem;
     }
 
     .hero-title {
@@ -431,39 +446,22 @@ waitlist_signup:
     }
 
     .dentropy-phone-container {
-      bottom: -38rem; /* Adjusted to accommodate larger images */
+      bottom: -14rem;
     }
 
     .phone-image-wrapper {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    .background-phone {
-      width: 58.5%; /* Match desktop size */
-      max-width: none;
-      margin-right: -12%; /* Match desktop overlap */
-    }
-
-    .foreground-phone {
-      width: 55%; /* Match desktop size */
-      max-width: none;
-      margin-left: -12%; /* Match desktop overlap */
-      margin-top: 0;
+      max-width: 400px; /* Increased from 350px */
     }
 
     .dentropy-phone-image {
-      max-height: none; /* Remove max-height constraint */
+      max-height: 800px; /* Increased from previous value */
     }
   }
 
-  @media (max-width: 576px) { /* Smaller mobile devices */
+  @media (max-width: 575px) { /* Smaller mobile devices */
     .hero-section {
-      padding: 6rem 0 18rem;
-      margin-bottom: 8rem;
+      padding: 5rem 0 21rem; /* Increased bottom padding */
+      margin-bottom: 12rem;
     }
 
     .hero-title {
@@ -475,16 +473,175 @@ waitlist_signup:
     }
 
     .dentropy-phone-container {
-      bottom: -28rem;
+      bottom: -14rem; /* Adjusted to accommodate larger image */
     }
 
-    .background-phone {
-      width: 62%; /* Slightly larger for better visibility on small screens */
+    .phone-image-wrapper {
+      max-width: 350px; /* Increased from 300px */
     }
 
-    .foreground-phone {
-      width: 58%; /* Slightly larger for better visibility on small screens */
+    .dentropy-phone-image {
+      max-height: 700px; /* Increased from previous value */
     }
+  }
+
+  #value-props {
+      background-color: #f8f9fa;
+      padding: 4rem 0;
+  }
+  .value-prop-section {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 1rem 4rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Added drop shadow */
+      transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  .value-prop-section:hover {
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+  }
+  .value-prop-section:last-child {
+      margin-bottom: 0;
+  }
+  .value-prop-content {
+      padding: 1rem;
+  }
+  .value-prop-image {
+      text-align: center;
+      padding: 1rem;
+  }
+  .value-prop-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+  }
+  .value-prop-list {
+      list-style-type: none;
+      padding-left: 0;
+  }
+  .value-prop-list li {
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+  }
+  .value-prop-list li::before {
+      content: "✓";
+      color: #007bff;
+      position: absolute;
+      left: 0;
+  }
+  @media (max-width: 991px) {
+      .value-prop-section {
+          padding: 2rem;
+      }
+      .value-prop-content, .value-prop-image {
+          padding: 1rem 0;
+      }
+  }
+  .why-dentropy-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      line-height: 1.2; 
+      color: #404040;
+  }
+
+  @media (max-width: 767px) {
+      .why-dentropy-title {
+          font-size: 2rem;
+      }
+  }
+
+  #key-features {
+      background-color: #f8f9fa;
+      padding: 4rem 0;
+  }
+  .feature-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem 3rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  .feature-icon {
+    margin-bottom: 1rem;
+  }
+  .feature-image {
+    max-width: 80px;
+    height: auto;
+  }
+  .feature-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #333;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    line-height: 1.2; 
+    color: #404040;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+
+  #waitlist-signup {
+    background: linear-gradient(135deg, #909DDB 0%, #6A4D75 100%);
+    padding: 4rem 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    color: #ffffff;
+  }
+
+  #waitlist-signup .container {
+    max-width: 900px; /* Increased from the default container width */
+  }
+
+  #waitlist-signup .section-title {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  #waitlist-signup .lead {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    font-size: 1.25rem; /* Slightly increased font size for better readability */
+    line-height: 1.6; /* Improved line height for better spacing */
+  }
+
+  #waitlist-signup .simple-nav-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #waitlist-signup .simple-nav-btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    text-decoration: none;
   }
 </style>
 
@@ -503,16 +660,15 @@ waitlist_signup:
                         <p class="hero-subtitle">{{page.hero_area.sub_title}}</p>
                         {% endif %}
                         <!-- Sign-up Button -->
-                        <a href="/signup" class="btn btn-light mb-4">{{ page.waitlist_signup.button_text }}</a>
-                        <!-- Dentropy Phone Images -->
-                        <div class="dentropy-phone-container">
-                            <div class="phone-image-wrapper">
-                                <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone Background" class="img-fluid dentropy-phone-image background-phone">
-                                <!-- <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone Foreground" class="img-fluid dentropy-phone-image foreground-phone"> -->
-                            </div>
-                        </div>
+                        <a href="/signup" class="simple-nav-btn">{{ page.waitlist_signup.button_text }}</a>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Dentropy Phone Image -->
+        <div class="dentropy-phone-container">
+            <div class="phone-image-wrapper">
+                <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone" class="img-fluid dentropy-phone-image">
             </div>
         </div>
     </section>
@@ -555,7 +711,79 @@ waitlist_signup:
         <!-- /.wrapper -->
     </section>
     <!-- /section -->
-    {% endif %} 
+    {% endif %}
+
+    <!-- New Value Proposition Sections -->
+    <section id="value-props" class="py-5">
+        <div class="container">
+            <h2 class="why-dentropy-title text-center">Why Dentropy</h2>
+            
+            <!-- Personal Organizable Database Section -->
+            <div class="value-prop-section">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="value-prop-image">
+                            <img src="{{ page.value_props.personal_database.image }}" alt="{{ page.value_props.personal_database.title }}" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="value-prop-content">
+                            <h2 class="mb-4">{{ page.value_props.personal_database.title }}</h2>
+                            <p class="lead mb-4">{{ page.value_props.personal_database.description }}</p>
+                            <ul class="value-prop-list">
+                                {% for feature in page.value_props.personal_database.features %}
+                                <li>{{ feature }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stream of Consciousness Organization Section -->
+            <div class="value-prop-section">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="value-prop-image">
+                            <img src="{{ page.value_props.stream_of_consciousness.image }}" alt="{{ page.value_props.stream_of_consciousness.title }}" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="value-prop-content">
+                            <h2 class="mb-4">{{ page.value_props.stream_of_consciousness.title }}</h2>
+                            <p class="lead mb-4">{{ page.value_props.stream_of_consciousness.description }}</p>
+                            <ul class="value-prop-list">
+                                {% for feature in page.value_props.stream_of_consciousness.features %}
+                                <li>{{ feature }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% if page.key_features.enable %}
+    <section id="key-features" class="py-5">
+        <div class="container">
+            <h2 class="section-title">{{ page.key_features.title }}</h2>
+            <div class="row justify-content-center">
+                {% for feature in page.key_features.features %}
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <img src="{{ feature.image }}" alt="{{ feature.title }}" class="feature-image">
+                        </div>
+                        <h3 class="feature-title">{{ feature.title }}</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
     {% if page.portfolios_area.enable %}
     <section id="portfolio">
         <div class="wrapper light-wrapper">
@@ -666,16 +894,13 @@ waitlist_signup:
     {% endif %} 
     <!-- New Waitlist Sign-up Section -->
     {% if page.waitlist_signup.enable %}
-    <section id="waitlist-signup" class="bg-default">
+    <section id="waitlist-signup">
         <div class="container">
             <div class="row justify-content-center text-center">
-                <div class="col-md-8 col-lg-7">
-                    <div class="space60"></div>
-                    <h2 class="display-4 text-white">{{ page.waitlist_signup.title }}</h2>
-                    <p class="lead mb-0 text-white">{{ page.waitlist_signup.sub_title }}</p>
-                    <div class="space30"></div>
-                    <a href="/signup" class="btn btn-dark">{{ page.waitlist_signup.button_text }}</a>
-                    <div class="space60"></div>
+                <div class="col-12">
+                    <h2 class="section-title">{{ page.waitlist_signup.title }}</h2>
+                    <p class="lead mb-4">{{ page.waitlist_signup.sub_title }}</p>
+                    <a href="{{ page.waitlist_signup.button_url }}" class="simple-nav-btn">{{ page.waitlist_signup.button_text }}</a>
                 </div>
             </div>
         </div>
