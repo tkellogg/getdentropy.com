@@ -1,20 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-default">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container">
     <a class="navbar-brand" href="/index">
-      <img src="/assets/images/dentropy-logo-wht.png" alt="Dentropy" class="logo-dark" style="height: 35px; width: auto;">
+      <img src="/assets/images/dentropy-logo.png" alt="Dentropy" class="logo-dark">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto align-items-center">
-        <!-- <li class="nav-item-light">
-          <a class="nav-link text-white" href="/team.html">Team</a>
-        </li>
-        <li class="nav-item-light">
-          <a class="nav-link text-white" href="/careers.html">Careers</a>
-        </li> -->
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a href="/signup" class="btn btn-dark">Sign Up</a>
         </li>
       </ul>
@@ -26,6 +17,17 @@
   .navbar {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    background-color: transparent !important;
+    transition: none !important;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .navbar-brand img {
+    height: 35px;
+    width: auto;
   }
   .navbar-nav {
     align-items: center;
@@ -34,19 +36,25 @@
     display: flex;
     align-items: center;
   }
-  .navbar-nav .btn.btn-send.nav-link {
+  .navbar-nav .btn.btn-dark {
     padding: 0.375rem 0.75rem;
-    font-size: inherit;
-    line-height: inherit;
-    color: white;
-    text-decoration: none;
-    border-radius: 0.25rem;
+    font-size: 0.875rem;
   }
-  .navbar-nav .btn.btn-send.nav-link:hover {
-    color: white;
-    opacity: 0.9;
-  }
-  .navbar-nav .nav-link.text-white {
-    color: white !important;
+  
+  @media (max-width: 991px) {
+    .navbar {
+      height: 56px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .navbar > .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar-brand img {
+      height: 28px;
+    }
   }
 </style>

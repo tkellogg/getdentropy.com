@@ -301,13 +301,14 @@ waitlist_signup:
     }
 }
 .hero-section {
-    padding: 10rem 0;
-    overflow: hidden;
+    padding: 8rem 0 29rem; /* Updated padding */
+    overflow: visible;
     position: relative;
+    background: linear-gradient(135deg, #909DDB 0%, #6A4D75 100%);
+    margin-bottom: 14rem; /* Updated margin-bottom */
 }
 
 .hero-content {
-    padding-right: 2rem;
     position: relative;
     z-index: 2;
 }
@@ -317,60 +318,97 @@ waitlist_signup:
     font-weight: 700;
     margin-bottom: 1.25rem;
     line-height: 1.2;
+    color: #ffffff; /* Ensure text is visible on the gradient */
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
-    /* margin-bottom: 1.875rem; */
+    margin-bottom: 1.875rem;
     line-height: 1.5;
-}
-
-.hero-image-container {
-    position: absolute;
-    top: 50%;
-    right: -10%;
-    transform: translateY(-50%);
-    /* width: 60%; */
-    height: auto;
-    z-index: 1;
+    color: #ffffff; /* Ensure text is visible on the gradient */
 }
 
 .hero-image {
     max-width: 100%;
     height: auto;
+    margin-bottom: 2rem;
+}
+
+.hero-content .btn {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.dentropy-phone-container {
+    position: absolute;
+    bottom: -42rem; /* Keep this value the same */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background-color: none;
+}
+
+.phone-image-wrapper {
+    position: relative;
     width: 100%;
-}
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-@media (max-width: 1200px) {
-    .hero-image-container {
-        right: -5%;
-        /* width: 55%; */
-    }
-}
+  .dentropy-phone-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 850px;
+  }
 
-@media (max-width: 991px) {
+  .background-phone {
+    position: relative;
+    z-index: 2;
+    width: 58.5%; /* Keep original size */
+  }
+
+  .foreground-phone {
+    position: relative;
+    z-index: 1;
+    width: 55%; /* Keep original size */
+    opacity: 0.7;
+    margin-left: -12%;
+  }
+
+  @media (max-width: 991px) { /* Tablet */
     .hero-section {
-        padding: 4rem 0;
+      padding: 7rem 0 24rem; /* Adjusted for tablet */
+      margin-bottom: 12rem;
+    }
+  }
+
+  @media (max-width: 768px) { /* Mobile */
+    .hero-section {
+      padding: 6rem 0 20rem; /* Adjusted for mobile */
+      margin-bottom: 10rem;
     }
 
-    .hero-content {
-        padding-right: 0;
-        /* margin-bottom: 2rem; */
-        text-align: center;
+    .dentropy-phone-container {
+      bottom: -30rem; /* Keep this value the same for mobile */
     }
 
-    .hero-image-container {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
-        width: 100%;
-        max-width: 500px;
-        /* margin: 2rem auto 0; */
-        margin-left: auto;
-        margin-right: auto;
+    .phone-image-wrapper {
+      flex-direction: column;
     }
-}
+
+    .background-phone {
+      width: 76.5%; /* Keep original mobile size */
+    }
+
+    .foreground-phone {
+      width: 75%; /* Keep original mobile size */
+      margin-left: 0;
+      margin-top: -20%;
+    }
+  }
 
 @media (max-width: 768px) {
     .hero-title {
@@ -379,6 +417,14 @@ waitlist_signup:
 
     .hero-subtitle {
         font-size: 1.25rem;
+    }
+
+    .hero-section {
+        padding: 6rem 0 2rem;
+    }
+
+    .dentropy-phone-image {
+        max-height: 600px; /* Adjusted for smaller screens, you can modify this value as needed */
     }
 }
 
@@ -391,11 +437,6 @@ waitlist_signup:
         font-size: 1rem;
     }
 }
-
-.hero-content .btn {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
 </style>
 
 <div class="content-wrapper">
@@ -403,8 +444,8 @@ waitlist_signup:
     {% if page.hero_area.enable %}
     <section id="home" class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
                     <div class="hero-content">
                         {% if page.hero_area.title %}
                         <h1 class="hero-title">{{page.hero_area.title}}</h1>
@@ -412,13 +453,15 @@ waitlist_signup:
                         {% if page.hero_area.sub_title %}
                         <p class="hero-subtitle">{{page.hero_area.sub_title}}</p>
                         {% endif %}
-                        <!-- New Sign-up Button -->
-                        <a href="/signup" class="btn btn-dark">{{ page.waitlist_signup.button_text }}</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-image-container">
-                        <img src="/assets/images/highlight-3.png" alt="Dentropy Feature" class="img-fluid hero-image">
+                        <!-- Sign-up Button -->
+                        <a href="/signup" class="btn btn-light mb-4">{{ page.waitlist_signup.button_text }}</a>
+                        <!-- Dentropy Phone Images -->
+                        <div class="dentropy-phone-container">
+                            <div class="phone-image-wrapper">
+                                <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone Background" class="img-fluid dentropy-phone-image background-phone">
+                                <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone Foreground" class="img-fluid dentropy-phone-image foreground-phone">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -427,7 +470,7 @@ waitlist_signup:
     {% endif %} 
     {% if page.features_area.enable %}
     <section id="services">
-        <div class="wrapper white-wrapper">
+        <div class="wrapper">
             <div class="container">
                 <div class="space140"></div>
                 <div class="row">
