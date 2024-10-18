@@ -5,12 +5,31 @@ custom_css: purple
 custom_font: font2
 ---
 
+<style>
+  /* ... existing styles ... */
+
+  #signup {
+    background-color: #222B33;
+    color: #ffffff;
+    padding: 4rem 0;
+  }
+
+  .wrapper.white-wrapper {
+    background-color: transparent;
+  }
+
+  .display-3 {
+    color: #ffffff;
+  }
+
+  /* ... other existing styles ... */
+</style>
+
 <div class="content-wrapper">
     {% include simple_nav.html %}
 
-    
     <section id="signup" class="py-1">
-        <div class="wrapper white-wrapper">
+        <div class="wrapper">
             <div class="container inner">
                 <div class="row justify-content-center">
                     <div class="col-md-10">
