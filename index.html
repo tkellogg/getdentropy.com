@@ -336,7 +336,7 @@ key_features:
 .hero-section {
     padding: 8rem 0 28rem; /* Changed from 8rem 0 40rem */
     overflow: visible;
-    position: relative;
+    /* position: relative; */
     background: linear-gradient(135deg, #909DDB 0%, #6A4D75 100%);
     margin-bottom: 20rem; /* Changed from 0 */
 }
@@ -418,12 +418,12 @@ key_features:
 
 @media (max-width: 991px) { /* Tablet */
     .hero-section {
-      padding: 7rem 0 18rem; /* Adjusted for tablet */
+      padding: 7rem 0 30rem; /* Adjusted for tablet */
       margin-bottom: 15rem;
     }
 
     .dentropy-phone-container {
-      bottom: -16rem; /* Adjusted from -15rem */
+      bottom: -11rem; /* Adjusted from -15rem */
     }
 
     .phone-image-wrapper {
@@ -433,7 +433,7 @@ key_features:
 
   @media (max-width: 767px) { /* Mobile */
     .hero-section {
-      padding: 6rem 0 18rem;
+      padding: 6rem 0 27rem;
       margin-bottom: 13rem;
     }
 
@@ -643,12 +643,148 @@ key_features:
     color: #ffffff;
     text-decoration: none;
   }
+
+  .hero-section {
+      /* overflow: hidden; */
+      position: relative;
+  }
+
+  .bubbles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .bubble-bg, .message-bubble {
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 18px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float 10s ease-in-out infinite;
+  }
+
+  .bubble-bg {
+    width: 100px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    opacity: 0.4;
+  }
+
+  .message-bubble {
+    font-size: 0.9rem;
+    color: #ffffff;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .bubble-1 { left: 15%; top: 25%; }
+    .bubble-2 { right: 18%; top: 35%; }
+    .bubble-3 { left: 22%; bottom: 35%; }
+    .bubble-4 { right: 40%; bottom: 28%; }
+    .bubble-5 { left: 35%; top: 85%; }
+    .bubble-6 { right: 12%; top: 70%; }
+    .bubble-7 { left: 28%; top: 45%; }
+
+    .message-1 { left: 11%; top: 55%; }
+    .message-2 { right: 19%; top: 80%; }
+    .message-3 { left: 15%; bottom: 20%; }
+    .message-4 { right: 15%; bottom: 35%; }
+  }
+
+  /* Large devices (desktops, 992px to 1199px) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .bubble-1 { left: 10%; top: 20%; }
+    .bubble-2 { right: 13%; top: 31%; }
+    .bubble-3 { left: 18%; bottom: 30%; }
+    .bubble-4 { right: 36%; bottom: 23%; }
+    .bubble-5 { left: 32%; top: 87%; }
+    .bubble-6 { right: 8%; top: 65%; }
+    .bubble-7 { left: 25%; top: 40%; }
+
+    .message-1 { left: 6%; top: 50%; }
+    .message-2 { right: 6%; top: 80%; }
+    .message-3 { left: 3%; bottom: 15%; }
+    .message-4 { right: 11%; bottom: 36%; }
+  }
+
+  /* Medium devices (tablets, 768px to 991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .bubble-1 { left: 8%; top: 15%; }
+    .bubble-2 { right: 10%; top: 25%; }
+    .bubble-3 { left: 15%; bottom: 25%; }
+    .bubble-4 { right: 30%; bottom: 20%; }
+    .bubble-5 { left: 25%; top: 80%; }
+    .bubble-6 { right: 6%; top: 55%; }
+    .bubble-7 { left: 20%; top: 35%; }
+
+    .message-bubble {
+      display: none;
+    }
+  }
+
+  /* Small devices (landscape phones, 576px to 767px) */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .bubble-1 { left: 5%; top: 10%; }
+    .bubble-2 { right: 8%; top: 20%; }
+    .bubble-3 { left: 12%; bottom: 20%; }
+    .bubble-4 { right: 25%; bottom: 15%; }
+    .bubble-5 { left: 20%; top: 75%; }
+    .bubble-6 { right: 5%; top: 45%; }
+    .bubble-7 { left: 15%; top: 30%; }
+
+    .message-bubble {
+      display: none;
+    }
+  }
+
+  /* Extra small devices (phones, less than 576px) */
+  @media (max-width: 575px) {
+    .bubble-1 { left: 3%; top: 8%; }
+    .bubble-2 { right: 5%; top: 18%; }
+    .bubble-3 { left: 10%; bottom: 18%; }
+    .bubble-4 { right: 20%; bottom: 12%; }
+    .bubble-5 { left: 15%; top: 70%; }
+    .bubble-6 { right: 3%; top: 40%; }
+    .bubble-7 { left: 12%; top: 25%; }
+
+    .message-bubble {
+      display: none;
+    }
+  }
 </style>
 
 <div class="content-wrapper">
     {% include simple_nav.html %}
     {% if page.hero_area.enable %}
     <section id="home" class="hero-section">
+        <div class="bubbles-container">
+            <!-- Background bubbles -->
+            <div class="bubble-bg bubble-1"></div>
+            <div class="bubble-bg bubble-2"></div>
+            <div class="bubble-bg bubble-3"></div>
+            <div class="bubble-bg bubble-4"></div>
+            <div class="bubble-bg bubble-5"></div>
+            <div class="bubble-bg bubble-6"></div> <!-- New bubble -->
+            <div class="bubble-bg bubble-7"></div> <!-- New bubble -->
+            
+            <!-- Text message bubbles -->
+            <div class="message-bubble message-1">Did I follow up on that email?</div>
+            <div class="message-bubble message-2">Idea for new feature</div>
+            <div class="message-bubble message-3">Project deadline next week</div>
+            <div class="message-bubble message-4">Running out of eggs</div>
+        </div>
+        
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -1047,3 +1183,19 @@ key_features:
       </div>
     </footer>
   </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const bubbles = document.querySelectorAll('.bubble-bg, .message-bubble');
+        
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            
+            bubbles.forEach((bubble, index) => {
+                const speed = 0.1 + (index * 0.01);
+                const yPos = -scrollY * speed;
+                bubble.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+    });
+</script>

@@ -427,7 +427,9 @@ canvas {
     z-index: 1008;
     width: 100%;
     padding: 0;
-    position: static; /* Changed from fixed to static */
+    position: absolute; /* Change from static to absolute */
+    top: 0;
+    left: 0;
 }
 .navbar.fixed.banner--stick,
 .navbar.shadow:not(.fixed):not(.banner--stick) {
