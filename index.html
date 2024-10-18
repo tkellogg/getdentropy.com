@@ -266,10 +266,10 @@ key_features:
   enable: true
   title: "Key Features"
   features:
-    - title: "Notes indexed in a graph database"
+    - title: "Index your notes in a graph database"
       image: "/assets/images/graph-icon.png"
 
-    - title: "Stores voice, text, images, URLs"
+    - title: "Store voice, text, images, and links"
       image: "/assets/images/record-icon.png"
 
     - title: "AI Chat, but only your information"
@@ -553,47 +553,69 @@ key_features:
   }
 
   #key-features {
-      background-color: #f8f9fa;
-      padding: 4rem 0;
+    background-color: #f8f9fa;
+    padding: 4rem 0;
   }
+
+  #key-features .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Add this line to center the title */
+  }
+
   .feature-card {
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 2rem 3rem;
+    padding: 1.5rem 1rem; /* Reduced padding */
     height: 100%;
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
+
   .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   }
+
   .feature-icon {
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Reduced from 2.5rem if you're using icon fonts */
+    margin-bottom: 0.75rem;
   }
+
   .feature-image {
-    max-width: 80px;
+    max-width: 60px; /* Reduced from 80px */
     height: auto;
   }
+
   .feature-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0;
-    color: #333;
+    font-size: 1rem; /* Reduced from 1.1rem */
+    margin-bottom: 0.5rem;
   }
 
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-    line-height: 1.2; 
-    color: #404040;
-    text-align: center;
+  .feature-description {
+    font-size: 0.85rem; /* Added to make description text smaller */
+    line-height: 1.4;
   }
 
-  @media (max-width: 767px) {
-    .section-title {
-      font-size: 2rem;
+  @media (max-width: 768px) {
+    #key-features .section-title {
+      font-size: 1.75rem;
+    }
+
+    .feature-card {
+      padding: 1.25rem;
+    }
+
+    .feature-image {
+      max-width: 50px;
+    }
+
+    .feature-title {
+      font-size: 0.9rem;
+    }
+
+    .feature-description {
+      font-size: 0.8rem;
     }
   }
 
@@ -901,12 +923,16 @@ key_features:
     </section>
 
     {% if page.key_features.enable %}
-    <section id="key-features" class="py-5">
+    <section id="key-features" class="py-4">
         <div class="container">
-            <h2 class="section-title">{{ page.key_features.title }}</h2>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h2 class="section-title">{{ page.key_features.title }}</h2>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 {% for feature in page.key_features.features %}
-                <div class="col-md-4 mb-4">
+                <div class="col-md-3 col-sm-6 mb-4">
                     <div class="feature-card text-center">
                         <div class="feature-icon">
                             <img src="{{ feature.image }}" alt="{{ feature.title }}" class="feature-image">

@@ -30,7 +30,7 @@
 
 <style>
   .simple-nav {
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     background-color: #ffffff;
   }
   .simple-nav-container {
@@ -77,6 +77,9 @@
   }
   
   @media (max-width: 768px) {
+    .simple-nav {
+      height: 56px; /* Set the height to 56px on mobile */
+    }
     .simple-nav-toggle {
       display: block;
       background: none;
@@ -104,6 +107,12 @@
     }
     .simple-nav-button {
       margin-top: 1rem;
+    }
+    .simple-nav-brand {
+      padding-left: 0rem; /* Add 1rem left padding to the logo */
+    }
+    .simple-nav-logo {
+      height: 28px; /* Adjust logo height if needed */
     }
   }
 </style>
