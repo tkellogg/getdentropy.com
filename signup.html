@@ -35,7 +35,7 @@ custom_font: font2
                     <div class="col-md-10">
                         <h2 class="display-3 text-center mb-4">Sign Up for Dentropy</h2>
                         <div class="space20"></div>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrXwaCTkwDp1xFPSpIa6cbPWU1-nXXigN7QjqEgPd1OTDXUA/viewform?embedded=true&usp=pp_url&entry.339456034=MainSite" width="100%" height="2170px" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrXwaCTkwDp1xFPSpIa6cbPWU1-nXXigN7QjqEgPd1OTDXUA/viewform?embedded=true&usp=pp_url&entry.339456034=MainSite" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe>
                     </div>
                 </div>
             </div>
@@ -58,9 +58,15 @@ custom_font: font2
 <script>
   // Function to resize the iframe
   function resizeIframe() {
-    var iframe = document.getElementById('signup-form');
+    var iframe = document.querySelector('iframe');
     if(iframe) {
-      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+      if (window.innerWidth <= 767) {
+        // Set a fixed height for mobile devices
+        iframe.style.height = '2400px';
+      } else {
+        // Use the content height for larger screens
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+      }
     }
   }
 
@@ -68,5 +74,8 @@ custom_font: font2
   window.addEventListener('resize', resizeIframe);
 
   // Resize the iframe when it's loaded
-  document.getElementById('signup-form').onload = resizeIframe;
+  document.querySelector('iframe').onload = resizeIframe;
+
+  // Initial resize call
+  resizeIframe();
 </script>
