@@ -9,7 +9,6 @@ custom_font: font2
   /* ... existing styles ... */
 
   #signup {
-    /* background-color: #222B33; */
     color: #ffffff;
     padding: 4rem 0;
   }
@@ -20,6 +19,24 @@ custom_font: font2
 
   .display-3 {
     color: #222B33;
+  }
+
+  #signup-form {
+    width: 100%;
+    min-height: 2000px; /* Set a minimum height */
+    border: none;
+  }
+
+  @media (max-width: 767px) {
+    #signup-form {
+      min-height: 2500px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #signup-form {
+      min-height: 2200px;
+    }
   }
 
   /* ... other existing styles ... */
@@ -35,7 +52,7 @@ custom_font: font2
                     <div class="col-md-10">
                         <h2 class="display-3 text-center mb-4">Sign Up for Dentropy</h2>
                         <div class="space20"></div>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrXwaCTkwDp1xFPSpIa6cbPWU1-nXXigN7QjqEgPd1OTDXUA/viewform?embedded=true&usp=pp_url&entry.339456034=MainSite" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe>
+                        <iframe id="signup-form" src="https://docs.google.com/forms/d/e/1FAIpQLScrXwaCTkwDp1xFPSpIa6cbPWU1-nXXigN7QjqEgPd1OTDXUA/viewform?embedded=true&usp=pp_url&entry.339456034=MainSite" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe>
                     </div>
                 </div>
             </div>
@@ -56,26 +73,32 @@ custom_font: font2
   </div>
 
 <script>
-  // Function to resize the iframe
   function resizeIframe() {
-    var iframe = document.querySelector('iframe');
-    if(iframe) {
-      if (window.innerWidth <= 767) {
-        // Set a fixed height for mobile devices
-        iframe.style.height = '2500px';
+    var iframe = document.getElementById('signup-form');
+    if (iframe) {
+      var minHeight = window.innerWidth <= 767 ? 2500 : 
+                      window.innerWidth <= 991 ? 2200 : 2000;
+      
+      iframe.style.height = Math.max(minHeight, iframe.contentWindow.document.body.scrollHeight) + 'px';
+    }
+  }
+
+  function checkIframeLoaded() {
+    var iframe = document.getElementById('signup-form');
+    if (iframe) {
+      // Check if we can access the contentWindow, if so, it's loaded
+      if (iframe.contentWindow && iframe.contentWindow.document.body) {
+        resizeIframe();
       } else {
-        // Use the content height for larger screens
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        // If not loaded, check again in 100ms
+        setTimeout(checkIframeLoaded, 100);
       }
     }
   }
 
-  // Resize the iframe when the window is resized
   window.addEventListener('resize', resizeIframe);
+  window.addEventListener('load', checkIframeLoaded);
 
-  // Resize the iframe when it's loaded
-  document.querySelector('iframe').onload = resizeIframe;
-
-  // Initial resize call
-  resizeIframe();
+  // Start checking if iframe is loaded
+  checkIframeLoaded();
 </script>
