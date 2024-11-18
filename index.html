@@ -263,7 +263,7 @@ value_props:
       - "Make lists, as things come to mind (e.g. groceries)"
 
 key_features:
-  enable: true
+  enable: false
   title: "Key Features"
   features:
     - title: "Index your notes in a graph database"
@@ -378,7 +378,7 @@ key_features:
 
   .hero-content .btn,
   .simple-nav-btn {
-    background-color: #746aff;
+    background-color: #637A7A;
     color: #ffffff;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -390,14 +390,14 @@ key_features:
 
   .hero-content .btn:hover,
   .simple-nav-btn:hover {
-    background-color: #5d54cc;
+    background-color: #556969;
     /* Slightly darker shade for hover effect */
     color: #ffffff;
     text-decoration: none;
   }
 
   .simple-nav-btn {
-    background-color: #746aff;
+    background-color: #637A7A;
     color: #ffffff;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -695,7 +695,7 @@ key_features:
 
   #waitlist-signup .simple-nav-btn {
     display: inline-block;
-    background-color: #746aff;
+    background-color: #637A7A;
     color: #ffffff;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
@@ -706,7 +706,7 @@ key_features:
   }
 
   #waitlist-signup .simple-nav-btn:hover {
-    background-color: #5d54cc;
+    background-color: #556969;
     /* Slightly darker shade for hover effect */
     color: #ffffff;
     text-decoration: none;
@@ -741,7 +741,7 @@ key_features:
   .bubble-bg {
     width: 100px;
     height: 30px;
-    background: rgba(116, 106, 255, 0.15);
+    background: rgba(99, 122, 122, 0.15);
     /* Changed to match button color */
     opacity: 0.4;
   }
@@ -750,7 +750,7 @@ key_features:
     font-size: 0.9rem;
     color: #ffffff;
     max-width: 300px;
-    background: rgba(116, 106, 255, 0.3);
+    background: rgba(99, 122, 122, 0.3);
     /* Changed to match button color with higher opacity */
   }
 
@@ -1191,10 +1191,11 @@ key_features:
 
   .value-prop-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(99, 122, 122, 0.2);
   }
 
   .value-prop-icon {
-    color: #746aff;
+    color: #637A7A;
     text-align: left;
   }
 
@@ -1265,7 +1266,7 @@ key_features:
   }
 
   .step-number {
-    background: #746aff;
+    background: #637A7A;
     color: white;
     width: 40px;
     height: 40px;
@@ -1323,6 +1324,37 @@ key_features:
     .screenshot-container img {
       max-width: 100%;
     }
+  }
+
+  /* Update all button styles to use the new color */
+  .hero-content .btn,
+  .simple-nav-btn {
+    background-color: #637A7A;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .hero-content .btn:hover,
+  .simple-nav-btn:hover {
+    background-color: #556969; /* Slightly darker shade for hover */
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  /* Additional button styles */
+  .btn-default,
+  .btn.btn-default {
+    background-color: #637A7A;
+  }
+
+  .btn-default:hover,
+  .btn.btn-default:hover {
+    background-color: #556969;
   }
 </style>
 
