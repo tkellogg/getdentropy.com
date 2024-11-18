@@ -277,98 +277,107 @@ key_features:
 ---
 
 <style>
-.cover-image-wrapper {
+  .cover-image-wrapper {
     background-image: url('/assets/images/intro-background.png');
     background-size: cover;
     background-position: center top;
-    padding: 60px 0 120px; /* Increased bottom padding */
+    padding: 60px 0 120px;
+    /* Increased bottom padding */
     position: relative;
-    overflow: visible; /* Changed from hidden to visible */
-}
+    overflow: visible;
+    /* Changed from hidden to visible */
+  }
 
-.cover-image-wrapper::before {
+  .cover-image-wrapper::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 25%; /* Reduced from 100% to 75% */
+    bottom: 25%;
+    /* Reduced from 100% to 75% */
     background-color: rgba(0, 0, 0, 0.3);
-}
+  }
 
-.cover-image-wrapper .container {
+  .cover-image-wrapper .container {
     position: relative;
     z-index: 1;
-}
+  }
 
-.cover-images {
+  .cover-images {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* Changed from center to stretch */
+    align-items: stretch;
+    /* Changed from center to stretch */
     max-width: 70%;
     margin: 0 auto;
     gap: 20px;
-}
+  }
 
-.cover-image {
+  .cover-image {
     width: calc(50% - 10px);
     height: auto;
     display: block;
-    object-fit: contain; /* Added this line */
-    max-height: 400px; /* Adjust this value as needed */
-}
+    object-fit: contain;
+    /* Added this line */
+    max-height: 400px;
+    /* Adjust this value as needed */
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .cover-images {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     .cover-image {
-        width: 100%;
-        margin-bottom: 20px;
-        max-height: none; /* Remove max-height on mobile */
+      width: 100%;
+      margin-bottom: 20px;
+      max-height: none;
+      /* Remove max-height on mobile */
     }
 
     .cover-image-wrapper::before {
-        bottom: 0; /* Full height background on mobile */
+      bottom: 0;
+      /* Full height background on mobile */
     }
-}
-.hero-section {
+  }
+
+  .hero-section {
     padding: 4rem 0 28rem;
     overflow: visible;
     position: relative;
     background: radial-gradient(circle at center, #2c3e50 0%, #1a1a1a 100%);
     margin-bottom: 20rem;
-}
+  }
 
-.hero-content {
+  .hero-content {
     position: relative;
     z-index: 2;
-}
+  }
 
-.hero-title {
-    font-size: 4rem;
+  .hero-title {
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.25rem;
     line-height: 1.2;
     color: #ffffff;
-}
+  }
 
-.hero-subtitle {
-    font-size: 1.6rem;
+  .hero-subtitle {
+    font-size: 1.2rem;
     margin-bottom: 1.875rem;
     line-height: 1.5;
     color: #e0e0e0;
-}
+  }
 
-.hero-image {
+  .hero-image {
     max-width: 100%;
     height: auto;
     margin-bottom: 2rem;
-}
+  }
 
-.hero-content .btn,
-.simple-nav-btn {
+  .hero-content .btn,
+  .simple-nav-btn {
     background-color: #746aff;
     color: #ffffff;
     padding: 0.5rem 1rem;
@@ -377,16 +386,17 @@ key_features:
     font-size: 1rem;
     font-weight: 500;
     transition: background-color 0.3s ease;
-}
+  }
 
-.hero-content .btn:hover,
-.simple-nav-btn:hover {
-    background-color: #5d54cc; /* Slightly darker shade for hover effect */
+  .hero-content .btn:hover,
+  .simple-nav-btn:hover {
+    background-color: #5d54cc;
+    /* Slightly darker shade for hover effect */
     color: #ffffff;
     text-decoration: none;
-}
+  }
 
-.simple-nav-btn {
+  .simple-nav-btn {
     background-color: #746aff;
     color: #ffffff;
     padding: 0.5rem 1rem;
@@ -396,44 +406,54 @@ key_features:
     font-weight: 500;
   }
 
-.dentropy-phone-container {
+  .dentropy-phone-container {
     position: absolute;
-    bottom: -18rem; /* Adjusted from -14rem to accommodate larger image */
+    bottom: -18rem;
+    /* Adjusted from -14rem to accommodate larger image */
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
-}
+  }
 
-.phone-image-wrapper {
+  .phone-image-wrapper {
     width: 100%;
-    max-width: 450px; /* Increased from 400px */
+    max-width: 450px;
+    /* Increased from 400px */
     margin: 0 auto;
-}
+  }
 
-.dentropy-phone-image {
+  .dentropy-phone-image {
     width: 100%;
     height: auto;
-    max-height: 900px; /* Increased from 800px */
+    max-height: 900px;
+    /* Increased from 800px */
     object-fit: contain;
-}
+  }
 
-@media (max-width: 991px) { /* Tablet */
+  @media (max-width: 991px) {
+
+    /* Tablet */
     .hero-section {
-      padding: 7rem 0 30rem; /* Adjusted for tablet */
+      padding: 7rem 0 30rem;
+      /* Adjusted for tablet */
       margin-bottom: 15rem;
     }
 
     .dentropy-phone-container {
-      bottom: -11rem; /* Adjusted from -15rem */
+      bottom: -11rem;
+      /* Adjusted from -15rem */
     }
 
     .phone-image-wrapper {
-      max-width: 400px; /* Increased from 350px */
+      max-width: 400px;
+      /* Increased from 350px */
     }
   }
 
-  @media (max-width: 767px) { /* Mobile */
+  @media (max-width: 767px) {
+
+    /* Mobile */
     .hero-section {
       padding: 6rem 0 27rem;
       margin-bottom: 13rem;
@@ -452,17 +472,22 @@ key_features:
     }
 
     .phone-image-wrapper {
-      max-width: 400px; /* Increased from 350px */
+      max-width: 400px;
+      /* Increased from 350px */
     }
 
     .dentropy-phone-image {
-      max-height: 800px; /* Increased from previous value */
+      max-height: 800px;
+      /* Increased from previous value */
     }
   }
 
-  @media (max-width: 575px) { /* Smaller mobile devices */
+  @media (max-width: 575px) {
+
+    /* Smaller mobile devices */
     .hero-section {
-      padding: 5rem 0 21rem; /* Increased bottom padding */
+      padding: 5rem 0 21rem;
+      /* Increased bottom padding */
       margin-bottom: 12rem;
     }
 
@@ -475,83 +500,85 @@ key_features:
     }
 
     .dentropy-phone-container {
-      bottom: -14rem; /* Adjusted to accommodate larger image */
+      bottom: -14rem;
+      /* Adjusted to accommodate larger image */
     }
 
     .phone-image-wrapper {
-      max-width: 350px; /* Increased from 300px */
+      max-width: 350px;
+      /* Increased from 300px */
     }
 
     .dentropy-phone-image {
-      max-height: 700px; /* Increased from previous value */
+      max-height: 700px;
+      /* Increased from previous value */
     }
   }
 
   #value-props {
-      background-color: #f8f9fa;
-      padding: 4rem 0;
+    background-color: #f8f9fa;
+    padding: 4rem 0;
   }
+
   .value-prop-section {
-      background-color: #ffffff;
-      border-radius: 1rem;
-      padding: 1rem 4rem;
-      margin-bottom: 3rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Added drop shadow */
-      transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    /* padding: 0 4rem; */
+    width: 80%;
+    border-radius: 1rem;
+    margin: 0 auto;
   }
-  .value-prop-section:hover {
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
-  }
+
   .value-prop-section:last-child {
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
+
   .value-prop-content {
-      padding: 1rem;
+    padding: 1rem;
   }
+
   .value-prop-image {
-      text-align: center;
-      padding: 1rem;
+    text-align: center;
+    padding: 1rem;
   }
+
   .value-prop-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
   }
+
   .value-prop-list {
-      list-style-type: none;
-      padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
   }
+
   .value-prop-list li {
-      padding: 0.5rem 0;
-      position: relative;
-      padding-left: 1.5rem;
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
   }
+
   .value-prop-list li::before {
-      content: "✓";
-      color: #007bff;
-      position: absolute;
-      left: 0;
+    content: "✓";
+    color: #007bff;
+    position: absolute;
+    left: 0;
   }
+
   @media (max-width: 991px) {
-      .value-prop-section {
-          padding: 2rem;
-      }
-      .value-prop-content, .value-prop-image {
-          padding: 1rem 0;
-      }
-  }
-  .why-dentropy-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 3rem;
-      line-height: 1.2; 
-      color: #404040;
+    .value-prop-section {
+      padding: 2rem;
+    }
+
+    .value-prop-content,
+    .value-prop-image {
+      padding: 1rem 0;
+    }
   }
 
   @media (max-width: 767px) {
-      .why-dentropy-title {
-          font-size: 2rem;
-      }
+    .why-dentropy-title {
+      font-size: 2rem;
+    }
   }
 
   #key-features {
@@ -562,7 +589,8 @@ key_features:
   #key-features .section-title {
     font-size: 2rem;
     margin-bottom: 2rem;
-    text-align: center; /* Add this line to center the title */
+    text-align: center;
+    /* Add this line to center the title */
   }
 
   .feature-card {
@@ -597,19 +625,23 @@ key_features:
   /* Tablet styles */
   @media (min-width: 768px) and (max-width: 991px) {
     #key-features .container {
-      max-width: 95%; /* Increase container width on tablets */
+      max-width: 95%;
+      /* Increase container width on tablets */
     }
 
     .feature-card {
-      padding: 1.5rem; /* Increase padding for more space */
+      padding: 1.5rem;
+      /* Increase padding for more space */
     }
 
     .feature-image {
-      max-width: 70px; /* Slightly larger icons on tablets */
+      max-width: 70px;
+      /* Slightly larger icons on tablets */
     }
 
     .feature-title {
-      font-size: 1rem; /* Slightly larger text on tablets */
+      font-size: 1rem;
+      /* Slightly larger text on tablets */
     }
   }
 
@@ -674,14 +706,15 @@ key_features:
   }
 
   #waitlist-signup .simple-nav-btn:hover {
-    background-color: #5d54cc; /* Slightly darker shade for hover effect */
+    background-color: #5d54cc;
+    /* Slightly darker shade for hover effect */
     color: #ffffff;
     text-decoration: none;
   }
 
   .hero-section {
-      /* overflow: hidden; */
-      position: relative;
+    /* overflow: hidden; */
+    position: relative;
   }
 
   .bubbles-container {
@@ -695,7 +728,8 @@ key_features:
     pointer-events: none;
   }
 
-  .bubble-bg, .message-bubble {
+  .bubble-bg,
+  .message-bubble {
     position: absolute;
     padding: 10px 20px;
     border-radius: 18px;
@@ -707,7 +741,8 @@ key_features:
   .bubble-bg {
     width: 100px;
     height: 30px;
-    background: rgba(116, 106, 255, 0.15); /* Changed to match button color */
+    background: rgba(116, 106, 255, 0.15);
+    /* Changed to match button color */
     opacity: 0.4;
   }
 
@@ -715,55 +750,174 @@ key_features:
     font-size: 0.9rem;
     color: #ffffff;
     max-width: 300px;
-    background: rgba(116, 106, 255, 0.3); /* Changed to match button color with higher opacity */
+    background: rgba(116, 106, 255, 0.3);
+    /* Changed to match button color with higher opacity */
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   /* Extra large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {
-    .bubble-1 { left: 15%; top: 25%; }
-    .bubble-2 { right: 18%; top: 35%; }
-    .bubble-3 { left: 22%; bottom: 35%; }
-    .bubble-4 { right: 40%; bottom: 28%; }
-    .bubble-5 { left: 35%; top: 85%; }
-    .bubble-6 { right: 12%; top: 70%; }
-    .bubble-7 { left: 28%; top: 45%; }
+    .bubble-1 {
+      left: 15%;
+      top: 25%;
+    }
 
-    .message-1 { left: 11%; top: 55%; }
-    .message-2 { right: 19%; top: 80%; }
-    .message-3 { left: 15%; bottom: 20%; }
-    .message-4 { right: 15%; bottom: 35%; }
+    .bubble-2 {
+      right: 18%;
+      top: 35%;
+    }
+
+    .bubble-3 {
+      left: 22%;
+      bottom: 35%;
+    }
+
+    .bubble-4 {
+      right: 40%;
+      bottom: 28%;
+    }
+
+    .bubble-5 {
+      left: 35%;
+      top: 85%;
+    }
+
+    .bubble-6 {
+      right: 12%;
+      top: 70%;
+    }
+
+    .bubble-7 {
+      left: 28%;
+      top: 45%;
+    }
+
+    .message-1 {
+      left: 11%;
+      top: 55%;
+    }
+
+    .message-2 {
+      right: 19%;
+      top: 80%;
+    }
+
+    .message-3 {
+      left: 15%;
+      bottom: 20%;
+    }
+
+    .message-4 {
+      right: 15%;
+      bottom: 35%;
+    }
   }
 
   /* Large devices (desktops, 992px to 1199px) */
   @media (min-width: 992px) and (max-width: 1199px) {
-    .bubble-1 { left: 10%; top: 20%; }
-    .bubble-2 { right: 13%; top: 31%; }
-    .bubble-3 { left: 18%; bottom: 30%; }
-    .bubble-4 { right: 36%; bottom: 23%; }
-    .bubble-5 { left: 32%; top: 87%; }
-    .bubble-6 { right: 8%; top: 65%; }
-    .bubble-7 { left: 25%; top: 40%; }
+    .bubble-1 {
+      left: 10%;
+      top: 20%;
+    }
 
-    .message-1 { left: 6%; top: 50%; }
-    .message-2 { right: 6%; top: 80%; }
-    .message-3 { left: 3%; bottom: 15%; }
-    .message-4 { right: 11%; bottom: 36%; }
+    .bubble-2 {
+      right: 13%;
+      top: 31%;
+    }
+
+    .bubble-3 {
+      left: 18%;
+      bottom: 30%;
+    }
+
+    .bubble-4 {
+      right: 36%;
+      bottom: 23%;
+    }
+
+    .bubble-5 {
+      left: 32%;
+      top: 87%;
+    }
+
+    .bubble-6 {
+      right: 8%;
+      top: 65%;
+    }
+
+    .bubble-7 {
+      left: 25%;
+      top: 40%;
+    }
+
+    .message-1 {
+      left: 6%;
+      top: 50%;
+    }
+
+    .message-2 {
+      right: 6%;
+      top: 80%;
+    }
+
+    .message-3 {
+      left: 3%;
+      bottom: 15%;
+    }
+
+    .message-4 {
+      right: 11%;
+      bottom: 36%;
+    }
   }
 
   /* Medium devices (tablets, 768px to 991px) */
   @media (min-width: 768px) and (max-width: 991px) {
-    .bubble-1 { left: 8%; top: 15%; }
-    .bubble-2 { right: 10%; top: 25%; }
-    .bubble-3 { left: 15%; bottom: 25%; }
-    .bubble-4 { right: 30%; bottom: 20%; }
-    .bubble-5 { left: 25%; top: 80%; }
-    .bubble-6 { right: 6%; top: 55%; }
-    .bubble-7 { left: 20%; top: 35%; }
+    .bubble-1 {
+      left: 8%;
+      top: 15%;
+    }
+
+    .bubble-2 {
+      right: 10%;
+      top: 25%;
+    }
+
+    .bubble-3 {
+      left: 15%;
+      bottom: 25%;
+    }
+
+    .bubble-4 {
+      right: 30%;
+      bottom: 20%;
+    }
+
+    .bubble-5 {
+      left: 25%;
+      top: 80%;
+    }
+
+    .bubble-6 {
+      right: 6%;
+      top: 55%;
+    }
+
+    .bubble-7 {
+      left: 20%;
+      top: 35%;
+    }
 
     .message-bubble {
       display: none;
@@ -772,13 +926,40 @@ key_features:
 
   /* Small devices (landscape phones, 576px to 767px) */
   @media (min-width: 576px) and (max-width: 767px) {
-    .bubble-1 { left: 5%; top: 8%; }
-    .bubble-2 { right: 8%; top: 18%; }
-    .bubble-3 { left: 12%; bottom: 20%; }
-    .bubble-4 { right: 25%; bottom: 15%; }
-    .bubble-5 { left: 20%; top: 75%; }
-    .bubble-6 { right: 5%; top: 45%; }
-    .bubble-7 { left: 15%; top: 30%; }
+    .bubble-1 {
+      left: 5%;
+      top: 8%;
+    }
+
+    .bubble-2 {
+      right: 8%;
+      top: 18%;
+    }
+
+    .bubble-3 {
+      left: 12%;
+      bottom: 20%;
+    }
+
+    .bubble-4 {
+      right: 25%;
+      bottom: 15%;
+    }
+
+    .bubble-5 {
+      left: 20%;
+      top: 75%;
+    }
+
+    .bubble-6 {
+      right: 5%;
+      top: 45%;
+    }
+
+    .bubble-7 {
+      left: 15%;
+      top: 30%;
+    }
 
     .message-bubble {
       display: none;
@@ -787,13 +968,40 @@ key_features:
 
   /* Extra small devices (phones, less than 576px) */
   @media (max-width: 575px) {
-    .bubble-1 { left: 3%; top: 8%; }
-    .bubble-2 { right: 5%; top: 18%; }
-    .bubble-3 { left: 10%; bottom: 18%; }
-    .bubble-4 { right: 20%; bottom: 12%; }
-    .bubble-5 { left: 15%; top: 70%; }
-    .bubble-6 { right: 3%; top: 40%; }
-    .bubble-7 { left: 12%; top: 25%; }
+    .bubble-1 {
+      left: 3%;
+      top: 8%;
+    }
+
+    .bubble-2 {
+      right: 5%;
+      top: 18%;
+    }
+
+    .bubble-3 {
+      left: 10%;
+      bottom: 18%;
+    }
+
+    .bubble-4 {
+      right: 20%;
+      bottom: 12%;
+    }
+
+    .bubble-5 {
+      left: 15%;
+      top: 70%;
+    }
+
+    .bubble-6 {
+      right: 3%;
+      top: 40%;
+    }
+
+    .bubble-7 {
+      left: 12%;
+      top: 25%;
+    }
 
     .message-bubble {
       display: none;
@@ -801,7 +1009,8 @@ key_features:
   }
 
   /* Header Styles */
-  h1, h2,
+  h1,
+  h2,
   .hero-title,
   .section-title,
   .why-dentropy-title,
@@ -809,9 +1018,13 @@ key_features:
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 600;
     line-height: 1;
+    font-size: 1.5rem;
   }
 
-  h3, h4, h5, h6,
+  h3,
+  h4,
+  h5,
+  h6,
   .feature-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -819,13 +1032,13 @@ key_features:
   }
 
   .hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1.25rem;
   }
 
   .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 1.875rem;
     line-height: 1.5;
@@ -833,12 +1046,12 @@ key_features:
 
   .section-title,
   .why-dentropy-title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
 
   .value-prop-section h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
 
@@ -934,7 +1147,8 @@ key_features:
     line-height: 1.6;
   }
 
-  p, .lead {
+  p,
+  .lead {
     font-size: 1.1rem;
     line-height: 1.6;
     font-weight: 400;
@@ -950,444 +1164,518 @@ key_features:
     line-height: 1.5;
     font-weight: 400;
   }
+
+  .value-prop-content .lead {
+    font-size: 0.9rem;
+    /* Changed from 1rem to 0.9rem */
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 0;
+    /* Remove bottom margin since we don't need it */
+  }
+
+  .value-prop-content h2 {
+    margin-bottom: 0.5rem;
+    /* Adjust spacing between title and text */
+  }
+
+  /* Value Props Styling */
+  .value-prop-card {
+    padding: 2rem 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    text-align: left;
+  }
+
+  .value-prop-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .value-prop-icon {
+    color: #746aff;
+    text-align: left;
+  }
+
+  .value-prop-icon .material-icons-outlined {
+    font-size: 32px; /* Increased from 24px */
+  }
+
+  .value-prop-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .value-prop-card .lead {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    .value-prop-card {
+      padding: 1.5rem;
+    }
+    
+    .value-prop-card h2 {
+      font-size: 1.25rem;
+    }
+    
+    .value-prop-card .lead {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .value-prop-card {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .value-props-subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  @media (max-width: 767px) {
+    .value-props-subtitle {
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+    }
+  }
 </style>
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 <div class="content-wrapper">
-    {% include simple_nav.html %}
-    {% if page.hero_area.enable %}
-    <section id="home" class="hero-section">
-        <div class="bubbles-container">
-            <!-- Background bubbles -->
-            <div class="bubble-bg bubble-1"></div>
-            <div class="bubble-bg bubble-2"></div>
-            <div class="bubble-bg bubble-3"></div>
-            <div class="bubble-bg bubble-4"></div>
-            <div class="bubble-bg bubble-5"></div>
-            <div class="bubble-bg bubble-6"></div> <!-- New bubble -->
-            <div class="bubble-bg bubble-7"></div> <!-- New bubble -->
-            
-            <!-- Text message bubbles -->
-            <div class="message-bubble message-1">Did I follow up on that email?</div>
-            <div class="message-bubble message-2">Idea for new feature</div>
-            <div class="message-bubble message-3">Project deadline next week</div>
-            <div class="message-bubble message-4">Running out of eggs</div>
-        </div>
-        
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <div class="hero-content">
-                        {% if page.hero_area.title %}
-                        <h1 class="hero-title">{{page.hero_area.title}}</h1>
-                        {% endif %}
-                        {% if page.hero_area.sub_title %}
-                        <p class="hero-subtitle">{{page.hero_area.sub_title}}</p>
-                        {% endif %}
-                        <!-- Sign-up Button -->
-                        <a href="/signup" class="simple-nav-btn">{{ page.waitlist_signup.button_text }}</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Dentropy Phone Image -->
-        <div class="dentropy-phone-container">
-            <div class="phone-image-wrapper">
-                <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone" class="img-fluid dentropy-phone-image">
-            </div>
-        </div>
-    </section>
-    {% endif %} 
-    {% if page.features_area.enable %}
-    <section id="services">
-        <div class="wrapper">
-            <div class="container">
-                <div class="space140"></div>
-                <div class="row">
-                    <div class="col-md-12">
-                        {% if page.features_area.title %}
-                        <h3 class="title-color color-gray">{{page.features_area.title}}</h3>
-                        {% endif %} 
-                        {% if page.features_area.sub_title %}
-                        <h2 class="display-3 text-center">{{page.features_area.sub_title}}</h2>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="space40"></div>
-                <div class="row">
-                    {% for feature in page.features_area.features %}
-                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
-                        <div class="feature-box text-center">
-                            {% if feature.image %}
-                            <img src="{{ feature.image }}" alt="{{ feature.title }}" class="mb-3 feature-image" style="max-width: 140px;">
-                            {% elsif feature.icon %}
-                            <i class="{{ feature.icon }} icon-svg mb-3" {% if feature.icon_color %}style="color: {{ feature.icon_color }};"{% endif %}></i>
-                            {% endif %}
-                            <h4>{{ feature.title }}</h4>
-                            <p>{{ feature.description }}</p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                <!--/.row -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.wrapper -->
-    </section>
-    <!-- /section -->
-    {% endif %}
+  {% include simple_nav.html %}
+  {% if page.hero_area.enable %}
+  <section id="home" class="hero-section">
+    <div class="bubbles-container">
+      <!-- Background bubbles -->
+      <div class="bubble-bg bubble-1"></div>
+      <div class="bubble-bg bubble-2"></div>
+      <div class="bubble-bg bubble-3"></div>
+      <div class="bubble-bg bubble-4"></div>
+      <div class="bubble-bg bubble-5"></div>
+      <div class="bubble-bg bubble-6"></div> <!-- New bubble -->
+      <div class="bubble-bg bubble-7"></div> <!-- New bubble -->
 
-    <!-- New Value Proposition Sections -->
-    <section id="value-props" class="py-5">
-        <div class="container">
-            <h2 class="why-dentropy-title text-center">Why Dentropy</h2>
-            
-            <!-- Personal Organizable Database Section -->
-            <div class="value-prop-section">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="value-prop-image">
-                            <img src="{{ page.value_props.personal_database.image }}" alt="{{ page.value_props.personal_database.title }}" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="value-prop-content">
-                            <h2 class="mb-4">{{ page.value_props.personal_database.title }}</h2>
-                            <p class="lead mb-4">{{ page.value_props.personal_database.description }}</p>
-                            <ul class="value-prop-list">
-                                {% for feature in page.value_props.personal_database.features %}
-                                <li>{{ feature }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Text message bubbles -->
+      <div class="message-bubble message-1">Did I follow up on that email?</div>
+      <div class="message-bubble message-2">Idea for new feature</div>
+      <div class="message-bubble message-3">Project deadline next week</div>
+      <div class="message-bubble message-4">Running out of eggs</div>
+    </div>
 
-            <!-- Stream of Consciousness Organization Section -->
-            <div class="value-prop-section">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="value-prop-image">
-                            <img src="{{ page.value_props.stream_of_consciousness.image }}" alt="{{ page.value_props.stream_of_consciousness.title }}" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="value-prop-content">
-                            <h2 class="mb-4">{{ page.value_props.stream_of_consciousness.title }}</h2>
-                            <p class="lead mb-4">{{ page.value_props.stream_of_consciousness.description }}</p>
-                            <ul class="value-prop-list">
-                                {% for feature in page.value_props.stream_of_consciousness.features %}
-                                <li>{{ feature }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="hero-content">
+            {% if page.hero_area.title %}
+            <h1 class="hero-title">{{page.hero_area.title}}</h1>
+            {% endif %}
+            {% if page.hero_area.sub_title %}
+            <p class="hero-subtitle">{{page.hero_area.sub_title}}</p>
+            {% endif %}
+            <!-- Sign-up Button -->
+            <a href="/signup" class="simple-nav-btn">{{ page.waitlist_signup.button_text }}</a>
+          </div>
         </div>
-    </section>
-
-    {% if page.key_features.enable %}
-    <section id="key-features" class="py-4">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h2 class="section-title">{{ page.key_features.title }}</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                {% for feature in page.key_features.features %}
-                <div class="col-md-4 col-sm-6 mb-4"> <!-- Changed from col-md-3 to col-md-4 -->
-                    <div class="feature-card text-center">
-                        <div class="feature-icon">
-                            <img src="{{ feature.image }}" alt="{{ feature.title }}" class="feature-image">
-                        </div>
-                        <h3 class="feature-title">{{ feature.title }}</h3>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-    {% endif %}
-
-    {% if page.portfolios_area.enable %}
-    <section id="portfolio">
-        <div class="wrapper light-wrapper">
-            <div class="container">
-                <div class="space140"></div>
-                {% if page.portfolios_area.title %}
-                <h3 class="title-color color-gray">{{page.portfolios_area.title}}</h3>
-                {% endif %}
-                <div class="row align-items-center">
-                    <div class="col-md-9">
-                        {% if page.portfolios_area.sub_title %}
-                        <h3 class="display-3 mb-0">{{page.portfolios_area.sub_title}}</h3>
-                        {% endif %}
-                    </div>
-                    <!--/column -->
-                    <div class="col-md-3 ml-auto text-md-right">
-                        <a href="#" class="btn btn-default m-0">See All Works</a>
-                    </div>
-                    <!--/column -->
-                </div>
-                <!--/.row -->
-                <div class="space40"></div>
-                <div class="grid grid-view boxed">
-                    <div class="tiles">
-                        <div class="row isotope light-gallery-wrapper">
-                            {% for portfolios in page.portfolios_area.portfolios %}
-                            <div class="item item-detailed grid-sizer col-md-6 col-lg-4">
-                                <div class="box bg-white shadow p-30">
-                                    <figure class="main rounded mb-30">
-                                        <div class="item-detailed-image">
-                                            {% if portfolios.sm_img %}
-                                            <img src="{{portfolios.sm_img}}" alt="{{portfolios.title}}" />
-                                            {% endif %} {% if portfolios.big_img %}
-                                            <img src="{{portfolios.big_img}}" alt="{{portfolios.title}}" />
-                                            {% endif %}
-                                        </div>
-                                        <a href="{{portfolios.big_img}}" class="hover-icon-first lightbox" data-tip="Enlarge image"><i class="jam jam-qr-code"></i></a>
-                                        <a href="{{portfolios.url}}" class="hover-icon-second" data-tip="Go to link"><i class="jam jam-link"></i></a>
-                                    </figure>
-                                    <div class="item-content">
-                                        <h2 class="post-title mb-10">{{portfolios.title}}</h2>
-                                        <div class="meta mb-0">{{portfolios.sub_title}}</div>
-                                    </div>
-                                    <!-- /.item-content -->
-                                </div>
-                                <!-- /.box -->
-                            </div>
-                            <!-- /.item -->
-                            {% endfor %}
-                        </div>
-                        <!-- /.row -->
-                    </div>
-                    <!-- /.tiles -->
-                </div>
-                <!-- /.grid -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.wrapper -->
-    </section>
-    {% endif %} 
-    {% if page.process_area.enable %}
-    <section id="process">
-        <div class="wrapper white-wrapper">
-            <div class="container">
-                <div class="space140"></div>
-                <div class="row align-items-center">
-                    {% if page.process_area.image %}
-                    <div class="col-lg-6 order-lg-2">
-                        <figure>
-                            <img src="{{page.process_area.image}}" alt="{{page.process_area.title}}" />
-                        </figure>
-                    </div>
-                    {% endif %}
-                    <div class="space20 d-md-none"></div>
-                    <div class="space50 d-none d-md-block d-lg-none"></div>
-                    <div class="col-lg-6 pr-60 pr-md-15">
-                        {% if page.process_area.title %}
-                        <h2 class="title-color color-gray">{{page.process_area.title}}</h2>
-                        {% endif %} 
-                        {% if page.process_area.sub_title %}
-                        <h3 class="display-3">{{page.process_area.sub_title}}</h3>
-                        {% endif %} 
-                        {% for list in page.process_area.lists %}
-                        <div class="space30"></div>
-                        <div class="d-flex flex-row {% if forloop.last %}justify-content-start{% else %}justify-content-center{% endif %}">
-                            <!-- Icon image hidden for now -->
-                            <!-- <div class="process-image mr-25" style="display: none;">
-                                <img src="{{list.image}}" alt="{{list.title}}" class="img-fluid" style="max-width: 60px;">
-                            </div> -->
-                            <div>
-                                <h4>{{list.title}}</h4>
-                                <p class="mb-0">{{list.description}}</p>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                    <!--/column -->
-                </div>
-                <!--/.row -->
-                <div class="space140"></div>
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.wrapper -->
-    </section>
-    <!-- /section -->
-    {% endif %} 
-    <!-- New Waitlist Sign-up Section -->
-    {% if page.waitlist_signup.enable %}
-    <section id="waitlist-signup">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-12">
-                    <h2 class="section-title">{{ page.waitlist_signup.title }}</h2>
-                    <p class="lead mb-4">{{ page.waitlist_signup.sub_title }}</p>
-                    <a href="{{ page.waitlist_signup.button_url }}" class="simple-nav-btn">{{ page.waitlist_signup.button_text }}</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    {% endif %}
-    <!-- /New Waitlist Sign-up Section -->
-    {% if page.cover_image_two.enable %}
-    <figure class="cover">
-        <img src="{{page.cover_image_two.image}}" alt="{{page.cover_image_two.title}}" />
-    </figure>
-    {% endif %}
-
-    {% if page.image_showcase.enable %}
-    <section id="image-showcase" class="py-5 position-relative">
-      <div class="parallax-background" style="background-image: url('{{ page.image_showcase.background_image }}');"></div>
+      </div>
+    </div>
+    <!-- Dentropy Phone Image -->
+    <div class="dentropy-phone-container">
+      <div class="phone-image-wrapper">
+        <img src="/assets/images/dentropy-phone.png" alt="Dentropy Phone" class="img-fluid dentropy-phone-image">
+      </div>
+    </div>
+  </section>
+  {% endif %}
+  {% if page.features_area.enable %}
+  <section id="services">
+    <div class="wrapper">
       <div class="container">
-        <div class="row justify-content-center align-items-end" style="margin-bottom: -160px;">
-          <div class="col-12">
-            <!-- Desktop and Tablet View -->
-            <div class="d-none d-md-flex justify-content-between align-items-end">
-              {% for image in page.image_showcase.images %}
-                <div class="showcase-image" style="width: 23%;">
-                  <img src="{{ image }}" alt="Showcase Image {{ forloop.index }}" class="img-fluid">
+        <div class="space140"></div>
+        <div class="row">
+          <div class="col-md-12">
+            {% if page.features_area.title %}
+            <h3 class="title-color color-gray">{{page.features_area.title}}</h3>
+            {% endif %}
+            {% if page.features_area.sub_title %}
+            <h2 class="display-3 text-center">{{page.features_area.sub_title}}</h2>
+            {% endif %}
+          </div>
+        </div>
+        <div class="space40"></div>
+        <div class="row">
+          {% for feature in page.features_area.features %}
+          <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+            <div class="feature-box text-center">
+              {% if feature.image %}
+              <img src="{{ feature.image }}" alt="{{ feature.title }}" class="mb-3 feature-image"
+                style="max-width: 140px;">
+              {% elsif feature.icon %}
+              <i class="{{ feature.icon }} icon-svg mb-3" {% if feature.icon_color
+                %}style="color: {{ feature.icon_color }};" {% endif %}></i>
+              {% endif %}
+              <h4>{{ feature.title }}</h4>
+              <p>{{ feature.description }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.wrapper -->
+  </section>
+  <!-- /section -->
+  {% endif %}
+
+  <!-- New Value Proposition Sections -->
+  <section id="value-props" class="py-5">
+    <div class="container">
+      <h2 class="value-props-subtitle mb-5">WHY DENTROPY?</h2>
+      
+      <div class="row justify-content-center">
+        <!-- Increased Productivity -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="value-prop-card">
+            <div class="value-prop-icon mb-2">
+              <span class="material-icons-outlined">trending_up</span>
+            </div>
+            <h2>Increased Productivity</h2>
+            <p class="lead">Reduce context-switching overhead, streamline information capture, and improve project completion rates.</p>
+          </div>
+        </div>
+
+        <!-- Employee Well-being -->
+        <div class="col-lg-4 col-md-6 mb-2">
+          <div class="value-prop-card">
+            <div class="value-prop-icon mb-2">
+              <span class="material-icons-outlined">favorite_border</span>
+            </div>
+            <h2>Employee Well-being</h2>
+            <p class="lead">Reduce workplace stress, increase job satisfaction, and support work-life balance.</p>
+          </div>
+        </div>
+
+        <!-- Workplace Inclusivity -->
+        <div class="col-lg-4 col-md-6 mb-2">
+          <div class="value-prop-card">
+            <div class="value-prop-icon mb-2">
+              <span class="material-icons-outlined">diversity_1</span>
+            </div>
+            <h2>Workplace Inclusivity</h2>
+            <p class="lead">Foster a diverse and inclusive workplace culture that supports different working styles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% if page.key_features.enable %}
+  <section id="key-features" class="py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h2 class="section-title">{{ page.key_features.title }}</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        {% for feature in page.key_features.features %}
+        <div class="col-md-4 col-sm-6 mb-4"> <!-- Changed from col-md-3 to col-md-4 -->
+          <div class="feature-card text-center">
+            <div class="feature-icon">
+              <img src="{{ feature.image }}" alt="{{ feature.title }}" class="feature-image">
+            </div>
+            <h3 class="feature-title">{{ feature.title }}</h3>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.portfolios_area.enable %}
+  <section id="portfolio">
+    <div class="wrapper light-wrapper">
+      <div class="container">
+        <div class="space140"></div>
+        {% if page.portfolios_area.title %}
+        <h3 class="title-color color-gray">{{page.portfolios_area.title}}</h3>
+        {% endif %}
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            {% if page.portfolios_area.sub_title %}
+            <h3 class="display-3 mb-0">{{page.portfolios_area.sub_title}}</h3>
+            {% endif %}
+          </div>
+          <!--/column -->
+          <div class="col-md-3 ml-auto text-md-right">
+            <a href="#" class="btn btn-default m-0">See All Works</a>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+        <div class="space40"></div>
+        <div class="grid grid-view boxed">
+          <div class="tiles">
+            <div class="row isotope light-gallery-wrapper">
+              {% for portfolios in page.portfolios_area.portfolios %}
+              <div class="item item-detailed grid-sizer col-md-6 col-lg-4">
+                <div class="box bg-white shadow p-30">
+                  <figure class="main rounded mb-30">
+                    <div class="item-detailed-image">
+                      {% if portfolios.sm_img %}
+                      <img src="{{portfolios.sm_img}}" alt="{{portfolios.title}}" />
+                      {% endif %} {% if portfolios.big_img %}
+                      <img src="{{portfolios.big_img}}" alt="{{portfolios.title}}" />
+                      {% endif %}
+                    </div>
+                    <a href="{{portfolios.big_img}}" class="hover-icon-first lightbox" data-tip="Enlarge image"><i
+                        class="jam jam-qr-code"></i></a>
+                    <a href="{{portfolios.url}}" class="hover-icon-second" data-tip="Go to link"><i
+                        class="jam jam-link"></i></a>
+                  </figure>
+                  <div class="item-content">
+                    <h2 class="post-title mb-10">{{portfolios.title}}</h2>
+                    <div class="meta mb-0">{{portfolios.sub_title}}</div>
+                  </div>
+                  <!-- /.item-content -->
                 </div>
+                <!-- /.box -->
+              </div>
+              <!-- /.item -->
               {% endfor %}
             </div>
-            
-            <!-- Mobile View (Carousel) -->
-            <div id="showcaseCarousel" class="carousel slide d-md-none" data-ride="carousel">
-              <div class="carousel-inner">
-                {% for image in page.image_showcase.images %}
-                  <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <img src="{{ image }}" alt="Showcase Image {{ forloop.index }}" class="d-block w-100">
-                  </div>
-                {% endfor %}
+            <!-- /.row -->
+          </div>
+          <!-- /.tiles -->
+        </div>
+        <!-- /.grid -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.wrapper -->
+  </section>
+  {% endif %}
+  {% if page.process_area.enable %}
+  <section id="process">
+    <div class="wrapper white-wrapper">
+      <div class="container">
+        <div class="space140"></div>
+        <div class="row align-items-center">
+          {% if page.process_area.image %}
+          <div class="col-lg-6 order-lg-2">
+            <figure>
+              <img src="{{page.process_area.image}}" alt="{{page.process_area.title}}" />
+            </figure>
+          </div>
+          {% endif %}
+          <div class="space20 d-md-none"></div>
+          <div class="space50 d-none d-md-block d-lg-none"></div>
+          <div class="col-lg-6 pr-60 pr-md-15">
+            {% if page.process_area.title %}
+            <h2 class="title-color color-gray">{{page.process_area.title}}</h2>
+            {% endif %}
+            {% if page.process_area.sub_title %}
+            <h3 class="display-3">{{page.process_area.sub_title}}</h3>
+            {% endif %}
+            {% for list in page.process_area.lists %}
+            <div class="space30"></div>
+            <div
+              class="d-flex flex-row {% if forloop.last %}justify-content-start{% else %}justify-content-center{% endif %}">
+              <!-- Icon image hidden for now -->
+              <!-- <div class="process-image mr-25" style="display: none;">
+                                <img src="{{list.image}}" alt="{{list.title}}" class="img-fluid" style="max-width: 60px;">
+                            </div> -->
+              <div>
+                <h4>{{list.title}}</h4>
+                <p class="mb-0">{{list.description}}</p>
               </div>
             </div>
+            {% endfor %}
           </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+        <div class="space140"></div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.wrapper -->
+  </section>
+  <!-- /section -->
+  {% endif %}
+  <!-- New Waitlist Sign-up Section -->
+  {% if page.waitlist_signup.enable %}
+  <section id="waitlist-signup">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-12">
+          <h2 class="section-title">{{ page.waitlist_signup.title }}</h2>
+          <p class="lead mb-4">{{ page.waitlist_signup.sub_title }}</p>
+          <a href="{{ page.waitlist_signup.button_url }}" class="simple-nav-btn">{{ page.waitlist_signup.button_text
+            }}</a>
         </div>
       </div>
-    </section>
-    {% endif %}
+    </div>
+  </section>
+  {% endif %}
+  <!-- /New Waitlist Sign-up Section -->
+  {% if page.cover_image_two.enable %}
+  <figure class="cover">
+    <img src="{{page.cover_image_two.image}}" alt="{{page.cover_image_two.title}}" />
+  </figure>
+  {% endif %}
 
-    {% if page.cover_image_three.enable %}
-    <figure class="cover">
-        <img src="{{page.cover_image_three.image}}" alt="{{page.cover_image_three.title}}" />
-    </figure>
-    {% endif %}
-    {% if page.cover_image_three.enable %}
-    <figure class="cover">
-        <img src="{{page.cover_image_three.image}}" alt="{{page.cover_image_three.title}}" />
-    </figure>
-    {% endif %}
-    {% if page.contact_area.enable %}
-    <section id="contact">
-        <div class="wrapper white-wrapper">
-            <div class="container">
-                <div class="space140"></div>
-                <div class="row">
-                    <div class="col-md-9">
-                        {% if page.contact_area.title %}
-                        <h2 class="title-color color-gray">{{page.contact_area.title}}</h2>
-                        {% endif %} {% if page.contact_area.sub_title %}
-                        <h3 class="display-3">{{page.contact_area.sub_title}}</h3>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="space40"></div>
-                <div class="row align-items-center">
-                    {% if page.contact_area.map_frame %}
-                    <div class="col-lg-6">
-                        <div class="google-map rounded">
-                            {{page.contact_area.map_frame}}
-                        </div>
-                        <!--/.google-map -->
-                    </div>
-                    <!--/column -->
-                    {% endif %}
-                    <div class="space20 d-md-none"></div>
-                    <div class="space50 d-none d-md-block d-lg-none"></div>
-                    <div class="col-lg-6 pl-50 pl-md-15">
-                        <form id="contact-form" class="fields-white" method="post" action="https://formsubmit.io/send/{{page.contact_area.action_email}}">
-                            <div class="messages"></div>
-                            <div class="controls">
-                                {% for forms_data in page.contact_area.forms_data %}
-                                {% if forms_data.field_type == "input" %}
-                                <div class="form-group">
-                                    <input
-                                        id="{{forms_data.field_name}}"
-                                        type="text"
-                                        name="{{forms_data.field_name}}"
-                                        class="form-control"
-                                        placeholder="{{forms_data.placeholder}}  *"
-                                        required="required"
-                                        data-error="{{forms_data.error_message}}"
-                                    />
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                {% else if forms_data.field_type == "textarea" %}
-                                <div class="form-group">
-                                    <textarea
-                                        id="{{forms_data.field_name}}"
-                                        name="{{forms_data.field_name}}"
-                                        class="form-control"
-                                        placeholder="{{forms_data.placeholder}} *"
-                                        rows="4"
-                                        required="required"
-                                        data-error="{{forms_data.error_message}}"
-                                    ></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                {% endif %} {% endfor %}
-                                <div class="form-row">
-                                    <div class="col-md-12">
-                                        <input type="submit" class="btn btn-send" value="Send message" />
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-12">
-                                        <p class="text-muted"><strong>*</strong> These fields are required.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!--/column -->
-                </div>
-                <!--/.row -->
+  {% if page.image_showcase.enable %}
+  <section id="image-showcase" class="py-5 position-relative">
+    <div class="parallax-background" style="background-image: url('{{ page.image_showcase.background_image }}');"></div>
+    <div class="container">
+      <div class="row justify-content-center align-items-end" style="margin-bottom: -160px;">
+        <div class="col-12">
+          <!-- Desktop and Tablet View -->
+          <div class="d-none d-md-flex justify-content-between align-items-end">
+            {% for image in page.image_showcase.images %}
+            <div class="showcase-image" style="width: 23%;">
+              <img src="{{ image }}" alt="Showcase Image {{ forloop.index }}" class="img-fluid">
             </div>
-            <!-- /.container -->
-        </div>
-        <div class="space50"></div>
-    </section>
-    {% endif %} 
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="footer-content text-center py-4">
-              <p class="mb-0">© 2024 Kellogg Software, LLC</p>
+            {% endfor %}
+          </div>
+
+          <!-- Mobile View (Carousel) -->
+          <div id="showcaseCarousel" class="carousel slide d-md-none" data-ride="carousel">
+            <div class="carousel-inner">
+              {% for image in page.image_showcase.images %}
+              <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img src="{{ image }}" alt="Showcase Image {{ forloop.index }}" class="d-block w-100">
+              </div>
+              {% endfor %}
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.cover_image_three.enable %}
+  <figure class="cover">
+    <img src="{{page.cover_image_three.image}}" alt="{{page.cover_image_three.title}}" />
+  </figure>
+  {% endif %}
+  {% if page.cover_image_three.enable %}
+  <figure class="cover">
+    <img src="{{page.cover_image_three.image}}" alt="{{page.cover_image_three.title}}" />
+  </figure>
+  {% endif %}
+  {% if page.contact_area.enable %}
+  <section id="contact">
+    <div class="wrapper white-wrapper">
+      <div class="container">
+        <div class="space140"></div>
+        <div class="row">
+          <div class="col-md-9">
+            {% if page.contact_area.title %}
+            <h2 class="title-color color-gray">{{page.contact_area.title}}</h2>
+            {% endif %} {% if page.contact_area.sub_title %}
+            <h3 class="display-3">{{page.contact_area.sub_title}}</h3>
+            {% endif %}
+          </div>
+        </div>
+        <div class="space40"></div>
+        <div class="row align-items-center">
+          {% if page.contact_area.map_frame %}
+          <div class="col-lg-6">
+            <div class="google-map rounded">
+              {{page.contact_area.map_frame}}
+            </div>
+            <!--/.google-map -->
+          </div>
+          <!--/column -->
+          {% endif %}
+          <div class="space20 d-md-none"></div>
+          <div class="space50 d-none d-md-block d-lg-none"></div>
+          <div class="col-lg-6 pl-50 pl-md-15">
+            <form id="contact-form" class="fields-white" method="post"
+              action="https://formsubmit.io/send/{{page.contact_area.action_email}}">
+              <div class="messages"></div>
+              <div class="controls">
+                {% for forms_data in page.contact_area.forms_data %}
+                {% if forms_data.field_type == "input" %}
+                <div class="form-group">
+                  <input id="{{forms_data.field_name}}" type="text" name="{{forms_data.field_name}}"
+                    class="form-control" placeholder="{{forms_data.placeholder}}  *" required="required"
+                    data-error="{{forms_data.error_message}}" />
+                  <div class="help-block with-errors"></div>
+                </div>
+                {% else if forms_data.field_type == "textarea" %}
+                <div class="form-group">
+                  <textarea id="{{forms_data.field_name}}" name="{{forms_data.field_name}}" class="form-control"
+                    placeholder="{{forms_data.placeholder}} *" rows="4" required="required"
+                    data-error="{{forms_data.error_message}}"></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+                {% endif %} {% endfor %}
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <input type="submit" class="btn btn-send" value="Send message" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <div class="space50"></div>
+  </section>
+  {% endif %}
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer-content text-center py-4">
+            <p class="mb-0">© 2024 Kellogg Software, LLC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const bubbles = document.querySelectorAll('.bubble-bg, .message-bubble');
-        
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            
-            bubbles.forEach((bubble, index) => {
-                const speed = 0.1 + (index * 0.01);
-                const yPos = -scrollY * speed;
-                bubble.style.transform = `translateY(${yPos}px)`;
-            });
-        });
+  document.addEventListener('DOMContentLoaded', function () {
+    const bubbles = document.querySelectorAll('.bubble-bg, .message-bubble');
+
+    window.addEventListener('scroll', function () {
+      const scrollY = window.scrollY;
+
+      bubbles.forEach((bubble, index) => {
+        const speed = 0.1 + (index * 0.01);
+        const yPos = -scrollY * speed;
+        bubble.style.transform = `translateY(${yPos}px)`;
+      });
     });
+  });
 </script>
