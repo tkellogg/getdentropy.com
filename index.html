@@ -464,7 +464,7 @@ key_features:
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
 
     .dentropy-phone-container {
@@ -1063,7 +1063,7 @@ key_features:
   /* Responsive adjustments */
   @media (max-width: 1199px) {
     .hero-title {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
 
     .section-title,
@@ -1251,6 +1251,79 @@ key_features:
       letter-spacing: 1.5px;
     }
   }
+
+  .steps-container {
+    padding: 2rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .step-number {
+    background: #746aff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  #how-it-works .step-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  #how-it-works .step-content .lead {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 991px) {
+    #how-it-works .step-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    #how-it-works .step-content .lead {
+        font-size: 0.9rem;
+    }
+  }
+
+  .screenshot-container {
+    padding: 2rem;
+    text-align: left;
+    position: relative;
+  }
+
+  .screenshot-container img {
+    max-width: 150%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 991px) {
+    .screenshot-container {
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+    
+    .screenshot-container img {
+      max-width: 100%;
+    }
+  }
 </style>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -1383,6 +1456,50 @@ key_features:
     </div>
   </section>
 
+  <section id="how-it-works" class="py-5">
+    <div class="container">
+      <h2 class="value-props-subtitle mb-5">HOW IT WORKS</h2>
+      
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <div class="steps-container">
+            <div class="step-item mb-4">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Write a thought</h3>
+                <p class="lead">Capture your ideas, tasks, or notes quickly and naturally - just like sending a text message.</p>
+              </div>
+            </div>
+
+            <div class="step-item mb-4">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Automatic Organization</h3>
+                <p class="lead">Dentropy intelligently categorizes and connects your thoughts in a structured database.</p>
+              </div>
+            </div>
+
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>AI-Powered Insights</h3>
+                <p class="lead">Transform scattered thoughts into meaningful insights with AI that understands your context.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="screenshot-container">
+            <img src="/assets/images/web-screenshot.png" alt="Dentropy Interface" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
   {% if page.key_features.enable %}
   <section id="key-features" class="py-4">
     <div class="container">
