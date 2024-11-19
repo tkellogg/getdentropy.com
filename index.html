@@ -396,16 +396,6 @@ key_features:
     text-decoration: none;
   }
 
-  .simple-nav-btn {
-    background-color: #FF7A59  ;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
   .dentropy-phone-container {
     position: absolute;
     bottom: -18rem;
@@ -691,23 +681,23 @@ key_features:
     margin-bottom: 2rem;
     font-size: 1.25rem;
     line-height: 1.6;
+    padding: 0 2rem;
   }
 
   #waitlist-signup .simple-nav-btn {
     display: inline-block;
-    background-color: #FF7A59   ;
+    background-color: #00C897;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 4px;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
 
   #waitlist-signup .simple-nav-btn:hover {
-    background-color: #C85A3F;
-    /* Slightly darker shade for hover effect */
+    background-color: #009B74;
     color: #ffffff;
     text-decoration: none;
   }
@@ -1232,7 +1222,7 @@ key_features:
   @media (max-width: 767px) {
     .value-prop-card {
       margin-bottom: 1.5rem;
-    }
+     }
   }
 
   .value-props-subtitle {
@@ -1247,9 +1237,16 @@ key_features:
 
   @media (max-width: 767px) {
     .value-props-subtitle {
-      font-size: 0.75rem;
+      font-size: 1.5rem;
       letter-spacing: 1.5px;
     }
+
+    .steps-container {
+    padding: 1rem 1rem;
+    position: relative;
+    z-index: 2;
+  }
+    
   }
 
   .steps-container {
@@ -1355,6 +1352,67 @@ key_features:
   .btn.btn-default:hover {
     background-color: #009B74 ;
   }
+
+  /* Update value props mobile styles */
+  @media (max-width: 767px) {
+    /* Value Props Section */
+    #value-props .container {
+      /* padding-left: 1.5rem;
+      padding-right: 1.5rem; */
+    }
+
+    /* Force single column on mobile */
+    #value-props .row > .col-lg-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    /* Increase text size and spacing */
+    .value-prop-card {
+      /* margin-bottom: 1.5rem; */
+      padding: 1.5rem 0 0 0;
+    }
+
+    .value-prop-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .value-prop-card .lead {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .value-prop-icon .material-icons-outlined {
+      font-size: 36px;
+    }
+
+    /* How it Works mobile text adjustments */
+    #how-it-works .step-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    #how-it-works .step-content .lead {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Add more spacing between sections */
+    #value-props,
+    #how-it-works {
+      padding: 3rem 0;
+    }
+  }
+
+  /* Even smaller screens */
+  @media (max-width: 576px) {
+    #value-props .container,
+    #how-it-works .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 </style>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -1455,10 +1513,11 @@ key_features:
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="value-prop-card">
             <div class="value-prop-icon mb-2">
-              <span class="material-icons-outlined">trending_up</span>
+              <span class="material-icons-outlined">inventory_2</span>
             </div>
-            <h2>Increased Productivity</h2>
-            <p class="lead">Reduce context-switching overhead, streamline information capture, and improve project completion rates.</p>
+            <h2>Ideas, Seamlessly Organized</h2>
+            <p class="lead">Turn scattered thoughts into an interconnected database.
+            </p>
           </div>
         </div>
 
@@ -1466,10 +1525,11 @@ key_features:
         <div class="col-lg-4 col-md-6 mb-2">
           <div class="value-prop-card">
             <div class="value-prop-icon mb-2">
-              <span class="material-icons-outlined">favorite_border</span>
+              <span class="material-icons-outlined">signpost</span>
             </div>
-            <h2>Improved Well-being</h2>
-            <p class="lead">Reduce workplace stress, increase job satisfaction, and support work-life balance.</p>
+            <h2>Thoughtful AI Guidance
+            </h2>
+            <p class="lead">AI thats helpful, but never intrusive.</p>
           </div>
         </div>
 
@@ -1477,10 +1537,10 @@ key_features:
         <div class="col-lg-4 col-md-6 mb-2">
           <div class="value-prop-card">
             <div class="value-prop-icon mb-2">
-              <span class="material-icons-outlined">diversity_1</span>
+              <span class="material-icons-outlined">rocket_launch</span>
             </div>
-            <h2>Workplace Inclusivity</h2>
-            <p class="lead">Foster a diverse and inclusive workplace culture that supports different working styles.</p>
+            <h2>Unlock Hidden Potential</h2>
+            <p class="lead">Empower yourself to achieve clarity and accomplish more.</p>
           </div>
         </div>
       </div>

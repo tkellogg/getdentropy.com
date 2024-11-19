@@ -3,10 +3,18 @@
     <a class="simple-nav-brand" href="/">
       <img src="/assets/images/dentropy-logo.png" alt="Dentropy" class="simple-nav-logo">
     </a>
-    <div class="simple-nav-menu">
+    <button class="simple-nav-toggle d-md-none">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="simple-nav-menu d-none d-md-block">
       <ul class="simple-nav-list">
-        <li class="simple-nav-item simple-nav-button">
-          <a href="/signup" class="simple-nav-btn">Sign Up</a>
+        <li class="simple-nav-item">
+          <a href="/about" class="simple-nav-link">About</a>
+        </li>
+        <li class="simple-nav-item">
+          <a href="/signup" class="simple-nav-link">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -15,54 +23,69 @@
 
 <style>
   .simple-nav {
-    padding: 1rem 2rem !important;
-    background-color: #232c35 !important;
-    position: relative !important;
-    width: 100% !important;
-    z-index: 1000 !important;
+    padding: 1rem 2rem;
+    background-color: #232c35;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
   }
   .simple-nav-container {
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .simple-nav-brand {
-    display: flex !important;
-    align-items: center !important;
+    display: flex;
+    align-items: center;
   }
   .simple-nav-logo {
-    max-height: 28px !important; 
-    width: auto !important;
+    max-height: 28px;
+    width: auto;
   }
   .simple-nav-toggle {
-    display: none !important;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
   }
+  .simple-nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transition: transform 0.2s ease-out;
+  }
+  .simple-nav-toggle span:nth-child(1) { top: 0; }
+  .simple-nav-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  .simple-nav-toggle span:nth-child(3) { bottom: 0; }
   .simple-nav-list {
-    list-style-type: none !important;
-    display: flex !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
   }
   .simple-nav-item {
-    margin-left: 1.5rem !important;
+    margin-left: 1rem;
   }
-  .simple-nav-btn {
-    color: #ffffff !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 4px !important;
-    text-decoration: none !important;
-    font-size: 0.9rem !important;
-    font-weight: 500 !important;
-    transition: background-color 0.3s ease !important;
-    display: inline-block !important;
-    line-height: 1.5 !important;
+  .simple-nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: opacity 0.3s ease;
   }
-  .simple-nav-btn:hover {
-    background-color: #009B74  !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
+  .simple-nav-link:hover {
+    opacity: 0.8;
+    color: #ffffff;
+    text-decoration: none;
   }
   
   @media (max-width: 991px) { /* Tablet */
@@ -74,28 +97,46 @@
     }
   }
   
-  @media (max-width: 768px) { /* Mobile */
-    .simple-nav {
-      height: 56px !important;
-      padding: 1rem 1rem !important;
-    }
+  @media (max-width: 767px) {
     .simple-nav-container {
-      justify-content: center !important; /* Center the logo */
+      position: relative;
     }
-    .simple-nav-brand {
-      padding-left: 0 !important;
-    }
-    .simple-nav-logo {
-      max-height: 24px !important;
-    }
+    
     .simple-nav-menu {
-      display: none !important; /* Hide the sign-up button */
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #232c35;
+      padding: 1rem;
+    }
+    
+    .simple-nav-menu.active {
+      display: block !important;
+    }
+    
+    .simple-nav-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .simple-nav-item {
+      margin: 0.5rem 0;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .simple-nav-link {
+      display: block;
+      padding: 0.5rem 0;
     }
   }
 </style>
 
 <script>
   document.querySelector('.simple-nav-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
     document.querySelector('.simple-nav-menu').classList.toggle('active');
   });
 </script>
