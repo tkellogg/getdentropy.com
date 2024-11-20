@@ -47,7 +47,7 @@ custom_font: font2
     padding: 0.5rem 1rem;
     border-radius: 100px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     color: #637A7A;
@@ -57,7 +57,7 @@ custom_font: font2
 
 .why-header {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 1.5rem;
@@ -75,20 +75,18 @@ custom_font: font2
 .why-image {
     flex: 0 0 400px;
     position: relative;
-    align-self: stretch;
-    margin-bottom: -3rem;
-    margin-right: -3rem;
-    margin-top: -3rem;
-    overflow: hidden;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: -3rem;
 }
 
 .why-image img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 0;
+    border-radius: 12px;
+    margin-bottom: -3rem;
 }
 
 .why-centered {
@@ -135,8 +133,11 @@ custom_font: font2
 
     .why-image {
         flex: 0 0 300px;
-        margin: -2rem -2rem -2rem -2rem;
-        border-radius: 0 0 12px 12px;
+        align-items: center;
+    }
+
+    .why-image img {
+        margin-bottom: 0;
     }
 }
 
@@ -159,7 +160,6 @@ custom_font: font2
 
     .why-image {
         flex: 0 0 250px;
-        margin: -1.5rem -1.5rem -1.5rem -1.5rem;
     }
 }
 
@@ -215,7 +215,7 @@ custom_font: font2
 
 .audience-button {
     display: inline-block;
-    background-color: #637A7A;
+    background-color: #00C897;
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
@@ -227,7 +227,7 @@ custom_font: font2
 }
 
 .audience-button:hover {
-    background-color: #556969;
+    background-color: #009B74;
     color: white;
     text-decoration: none;
 }
@@ -279,7 +279,7 @@ custom_font: font2
         <p class="why-description">Easily record your ideas with voice, text, or photos. Dentropy keeps them safe and helps you uncover connections, turning scattered thoughts into the foundation of your next breakthrough.</p>
       </div>
       <div class="why-image">
-        <img src="/assets/images/idea-phone.png" alt="Ideas visualization">
+        <img src="/assets/images/idea-lost.png" alt="Ideas visualization">
       </div>
     </div>
   </section>
@@ -293,7 +293,7 @@ custom_font: font2
         <p class="why-description">Dentropy is built for neurodiverse minds. By adapting to diverse thinking styles, it enhances focus, organization, and creativity across your team.</p>
       </div>
       <div class="why-image">
-        <img src="/assets/images/team-phone.png" alt="Focus visualization">
+        <img src="/assets/images/team-connection.png" alt="Focus visualization">
       </div>
     </div>
   </section>
