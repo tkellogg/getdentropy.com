@@ -446,7 +446,7 @@ key_features:
     /* Mobile */
     .hero-section {
       padding: 6rem 0 27rem;
-      margin-bottom: 13rem;
+      margin-bottom: 15rem;
     }
 
     .hero-title {
@@ -1411,6 +1411,33 @@ key_features:
     #how-it-works .container {
       padding-left: 1rem;
       padding-right: 1rem;
+    }
+  }
+
+  /* Update value props styles */
+  @media (max-width: 991px) { /* Tablet breakpoint */
+    #value-props .row {
+      flex-direction: column;
+    }
+
+    #value-props .col-lg-4 {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .value-prop-card {
+      margin-bottom: 0;
+    }
+
+    /* Increase text sizes for better readability on tablet */
+    .value-prop-card h2 {
+      font-size: 1.75rem;
+    }
+
+    .value-prop-card .lead {
+      font-size: 1.1rem;
     }
   }
 </style>

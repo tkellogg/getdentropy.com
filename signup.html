@@ -49,18 +49,95 @@ custom_font: font2
   }
 
   /* ... other existing styles ... */
+
+  .quote-section {
+    padding: 4rem 0 2rem;
+  }
+
+  .quote-container {
+    position: relative;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .quote-container blockquote {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+  }
+
+  .quote-attribution {
+    font-size: 1rem;
+    color: #637A7A;
+    font-weight: 500;
+  }
+
+  /* Update signup header to match About page style */
+  .display-3 {
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 767px) {
+    .quote-container blockquote {
+      font-size: 1.5rem;
+    }
+    
+    .quote-attribution {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Center content */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 1rem;
+    }
+  }
 </style>
 
 <div class="content-wrapper">
     {% include simple_nav.html %}
+<!-- 
+    <section class="quote-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="quote-container">
+              <blockquote>
+                "We are building a community of ADHD thinkers to build products that help us live more focused lives"
+              </blockquote>
+              <div class="quote-attribution">
+                — Nam Nguyen, CPO & Co-founder
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <section id="signup" class="py-1">
         <div class="wrapper">
             <div class="container inner">
                 <div class="row justify-content-center">
                     <div class="col-md-10">
+
+                      <div class="space80"></div>
+                      
                         <h2 class="display-3 text-center mb-4">Sign Up for Dentropy</h2>
-                        <div class="space20"></div>
                         <iframe id="signup-form" src="https://docs.google.com/forms/d/e/1FAIpQLScrXwaCTkwDp1xFPSpIa6cbPWU1-nXXigN7QjqEgPd1OTDXUA/viewform?embedded=true&usp=pp_url&entry.339456034=MainSite" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe>
                     </div>
                 </div>
