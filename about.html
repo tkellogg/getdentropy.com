@@ -1,0 +1,463 @@
+---
+layout: one_page
+title: About Dentropy
+custom_css: purple
+custom_font: font2
+---
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  /* Import existing styles from index.html */
+  .simple-nav {
+    padding: 0.5rem 2rem;
+    background-color: #232c35;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* About page specific styles */
+  .about-hero {
+    background: radial-gradient(circle at center, #2c3e50 0%, #1a1a1a 100%);
+    padding: 6rem 0 4rem;
+    color: white;
+  }
+
+  .principles-section {
+
+    background-color: #f8f9fa;
+  }
+
+  .principle-card {
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .principle-item {
+    padding: 1rem 0;
+  }
+
+  .principle-divider {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .principle-number {
+    color: #637A7A;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .principle-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+  }
+
+  .principle-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .team-section {
+    padding: 5rem 0;
+  }
+
+  .team-member {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .team-member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+  }
+
+  .team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: #333;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+  }
+
+  .member-title {
+    font-size: 0.9rem;
+    color: #637A7A;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .team-member p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto 1rem;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-links a {
+    color: #637A7A;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #48565E;
+  }
+
+  .social-links .material-icons-outlined {
+    font-size: 1.25rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  /* Remove margin from last principle item */
+  .principle-item:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Remove divider from last principle */
+  .principle-divider:last-child {
+    display: none;
+  }
+
+  /* Remove margin from last team member */
+  .team-member:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Update team styles */
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .team-member {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .team-member img {
+    width: 120px; /* Reduced from 180px */
+    height: 120px; /* Reduced from 180px */
+    border-radius: 50%;
+    margin-bottom: 1rem; /* Reduced from 1.5rem */
+    object-fit: cover;
+  }
+
+  .team-member h3 {
+    font-size: 1.25rem; /* Reduced from 1.5rem */
+    margin-bottom: 0.25rem;
+    color: #333;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+  }
+
+  .member-title {
+    font-size: 0.8rem; /* Reduced from 0.9rem */
+    color: #637A7A;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  .team-member p {
+    font-size: 0.85rem; /* Reduced from 0.9rem */
+    color: #666;
+    line-height: 1.5;
+    margin: 0 auto 0.75rem;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 767px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .quote-section {
+    padding: 5rem 0 2rem;
+  }
+
+  .quote-container {
+    position: relative;
+    padding: 2rem 0;
+  }
+
+  .quote-container blockquote {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    color: #333;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+  }
+
+  .quote-attribution {
+    font-size: 1rem;
+    color: #637A7A;
+    font-weight: 500;
+  }
+
+  @media (max-width: 767px) {
+    .quote-container blockquote {
+      font-size: 1.5rem;
+    }
+    
+    .quote-attribution {
+      font-size: 0.9rem;
+    }
+  }
+
+  .contact-highlight {
+    margin-top: 3rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .contact-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .contact-icon {
+    color: #637A7A;
+    font-size: 1.25rem;
+  }
+
+  .contact-link {
+    color: #637A7A;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .contact-link:hover {
+    color: #48565E;
+  }
+
+  @media (max-width: 576px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+  }
+
+  /* Center all sections */
+  .container {
+    max-width: 800px; /* Reduced from default container width */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Remove left alignment from subtitles */
+  .section-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  /* Remove col-lg-8 constraint */
+  .principles-section .row,
+  .team-section .row,
+  .quote-section .row {
+    justify-content: center;
+  }
+
+  .principles-section .col-lg-8,
+  .team-section .col-lg-8,
+  .quote-section .col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Center quote text */
+  .quote-container {
+    text-align: center;
+  }
+
+  /* Adjust padding for mobile */
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 1rem;
+    }
+  }
+</style>
+
+<div class="content-wrapper">
+  {% include simple_nav.html %}
+
+  <!-- About Hero Section -->
+  <!-- <section class="about-hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="hero-title mb-4">About Dentropy</h1>
+          <p class="hero-subtitle">Building tools for neurodivergent minds to thrive in a neurotypical world.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Quote Section -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="quote-container">
+            <blockquote>
+              "The problem with all the competition is that there's too much friction for someone with ADHD. We believe that we can overcome that with clever use of AI to create a superior UX."
+            </blockquote>
+            <div class="quote-attribution">
+              — Tim Kellogg, CEO & Co-founder
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guiding Principles Section -->
+  <section class="principles-section">
+    <div class="container">
+      <h2 class="section-subtitle">Our Guiding Principles</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="principle-card">
+            <!-- Principle 1 -->
+            <div class="principle-item">
+              <div class="principle-number">01</div>
+              <h3 class="principle-title">Privacy First</h3>
+              <p class="principle-description">Your data belongs to you. We believe in complete transparency and user control over personal information.</p>
+            </div>
+
+            <!-- Principle 2 -->
+            <div class="principle-item">
+              <div class="principle-number">02</div>
+              <h3 class="principle-title">Neurodiversity Focused</h3>
+              <p class="principle-description">Built specifically for ADHD minds, embracing different ways of thinking and processing information.</p>
+            </div>
+
+            <!-- Principle 3 -->
+            <div class="principle-item">
+              <div class="principle-number">03</div>
+              <h3 class="principle-title">Simplicity in Design</h3>
+              <p class="principle-description">Complex functionality delivered through intuitive, distraction-free interfaces.</p>
+            </div>
+
+            <!-- Principle 4 -->
+            <div class="principle-item">
+              <div class="principle-number">04</div>
+              <h3 class="principle-title">Ethical AI</h3>
+              <p class="principle-description">AI that augments human capability while maintaining transparency and user agency.</p>
+            </div>
+
+            <!-- Principle 5 -->
+            <div class="principle-item">
+              <div class="principle-number">05</div>
+              <h3 class="principle-title">Open Communication</h3>
+              <p class="principle-description">Building in public with our community, sharing our journey and learning together.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <h2 class="section-subtitle">Who Makes Dentropy</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="team-grid">
+            <div class="team-member">
+              <img src="/assets/images/tim-profile.png" alt="Tim Kellogg">
+              <h3>Tim Kellogg</h3>
+              <div class="member-title">CEO & Co-founder</div>
+              <p>ADHD. Engineer. Former @ Amazon.</p>
+              <div class="social-links">
+                <a href="https://timkellogg.me/" target="_blank" rel="noopener">
+                  <span class="material-icons-outlined">language</span>
+                </a>
+                <a href="https://www.linkedin.com/in/tim-kellogg-69802913/" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <img src="/assets/images/nam-profile.png" alt="Nam Nguyen">
+              <h3>Nam Nguyen</h3>
+              <div class="member-title">CPO & Co-founder</div>
+              <p>ADHD. Product Designer. Former @ Amazon.</p>
+              <div class="social-links">
+                <a href="https://nam-ux.com/" target="_blank" rel="noopener">
+                  <span class="material-icons-outlined">language</span>
+                </a>
+                <a href="https://www.linkedin.com/in/namux/" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-highlight">
+            <div class="contact-content">
+              <div class="contact-text">
+                <span class="material-icons-outlined contact-icon">mail_outline</span>
+                Feel free to reach out:
+              </div>
+              <a href="mailto:hello@dentropy.com" class="contact-link">hello@dentropy.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div> 
