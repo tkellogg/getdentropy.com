@@ -1,0 +1,311 @@
+---
+layout: one_page
+title: Why Dentropy
+custom_css: purple
+custom_font: font2
+---
+
+<!-- Add Material Icons link -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<style>
+.why-section {
+    padding: 1rem 0;
+}
+
+.why-section:first-of-type {
+    padding-top: 4rem;
+}
+
+.why-section:last-of-type {
+    padding-bottom: 4rem;
+}
+
+.why-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 12px;
+}
+
+.why-section:nth-child(2) .why-container,
+.why-section:nth-child(3) .why-container,
+.why-section:nth-child(4) .why-container {
+    background: none;
+}
+
+.why-content {
+    flex: 1;
+}
+
+.why-label {
+    display: inline-block;
+    background: rgba(99, 122, 122, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #637A7A;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.why-header {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.why-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 540px;
+}
+
+.why-image {
+    flex: 0 0 400px;
+    position: relative;
+    align-self: stretch;
+    margin-bottom: -3rem;
+    margin-right: -3rem;
+    margin-top: -3rem;
+    overflow: hidden;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.why-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.why-centered {
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.why-centered .why-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.why-centered .why-description {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .why-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .why-header {
+        font-size: 2rem;
+    }
+
+    .why-description {
+        font-size: 1rem;
+    }
+
+    .why-section {
+        padding: 1rem 0;
+    }
+
+    .why-section:first-of-type {
+        padding-top: 3rem;
+    }
+
+    .why-section:last-of-type {
+        padding-bottom: 3rem;
+    }
+
+    .why-image {
+        flex: 0 0 300px;
+        margin: -2rem -2rem -2rem -2rem;
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .why-container {
+        padding: 1.5rem;
+    }
+
+    .why-section {
+        padding: 1rem 1rem;
+    }
+
+    .why-section:first-of-type {
+        padding-top: 2rem;
+    }
+
+    .why-section:last-of-type {
+        padding-bottom: 2rem;
+    }
+
+    .why-image {
+        flex: 0 0 250px;
+        margin: -1.5rem -1.5rem -1.5rem -1.5rem;
+    }
+}
+
+.audience-section {
+    padding: 4rem 0 2rem;
+}
+
+.audience-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 0 1.5rem;
+}
+
+.audience-column {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+
+.audience-icon {
+    font-size: 48px;
+    color: #637A7A;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.audience-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.audience-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+    flex-grow: 1;
+}
+
+.audience-button {
+    display: inline-block;
+    background-color: #637A7A;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    min-width: 140px;
+}
+
+.audience-button:hover {
+    background-color: #556969;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .audience-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 1rem;
+    }
+
+    .audience-section {
+        padding: 2rem 0 1rem;
+    }
+
+    .audience-column {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<div class="content-wrapper">
+  {% include simple_nav.html %}
+
+  <!-- Add this after simple_nav.html and before the first why-section -->
+  <section class="audience-section">
+    <div class="audience-container">
+      <div class="audience-column">
+        <span class="material-icons-outlined audience-icon">emoji_people</span>
+        <div class="audience-label">For ADHD Individuals</div>
+        <p class="audience-description">Create an account to manage your day to day tasks from work to personal.</p>
+        <a href="/signup" class="audience-button">Get Started</a>
+      </div>
+      <div class="audience-column">
+        <span class="material-icons-outlined audience-icon">domain</span>
+        <div class="audience-label">For Businesses</div>
+        <p class="audience-description">Support your neurodiverse team members and enhance your organizations productivity.</p>
+        <a href="mailto:hello@dentropy.com" class="audience-button">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- First Container -->
+  <section class="why-section">
+    <div class="why-container">
+      <div class="why-content">
+        <div class="why-label">FOR THE ENDLESS IDEAS</div>
+        <h2 class="why-header">Never lose another idea</h2>
+        <p class="why-description">Easily record your ideas with voice, text, or photos. Dentropy keeps them safe and helps you uncover connections, turning scattered thoughts into the foundation of your next breakthrough.</p>
+      </div>
+      <div class="why-image">
+        <img src="/assets/images/idea-phone.png" alt="Ideas visualization">
+      </div>
+    </div>
+  </section>
+
+  <!-- Second Container -->
+  <section class="why-section" style="background: #f8f9fa;">
+    <div class="why-container">
+      <div class="why-content">
+        <div class="why-label">FOR THE TEAM</div>
+        <h2 class="why-header">Unlock the Potential of Neurodiverse Teams</h2>
+        <p class="why-description">Dentropy is built for neurodiverse minds. By adapting to diverse thinking styles, it enhances focus, organization, and creativity across your team.</p>
+      </div>
+      <div class="why-image">
+        <img src="/assets/images/team-phone.png" alt="Focus visualization">
+      </div>
+    </div>
+  </section>
+
+  <!-- Third Container (Centered) -->
+  <section class="why-section why-centered">
+    <div class="why-container">
+      <div class="why-content">
+        <div class="why-label">FOR THE SCATTERED MIND</div>
+        <h2 class="why-header">One Place for All Your Thoughts</h2>
+        <p class="why-description">Say goodbye to juggling multiple apps. Dentropy lets you capture, organize, and connect your thoughts in one seamless space—turning your scattered ideas into actionable plans effortlessly.</p>
+      </div>
+    </div>
+  </section>
+</div> 
